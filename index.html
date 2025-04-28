@@ -16,23 +16,27 @@
       line-height: 1.6;
     }
 
-   .hero {
-  background-color: #990000; /* IU Crimson */
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  color: white; /* 글자색은 흰색으로 변경 추천 */
-  padding: 20px;
-}
+    .hero {
+      background-color: #990000; /* Indiana University Crimson 색상 */
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white; /* 텍스트 색상을 흰색으로 변경 */
+      padding: 20px;
+    }
+
+    .hero h1 {
+      font-size: 50px;
+      margin-bottom: 10px;
+    }
 
     .hero h3, .hero h4 {
       margin: 5px;
     }
 
-    /* 프로필 사진 스타일링 */
     .profile-pic {
       width: 180px;
       height: 180px;
@@ -40,7 +44,7 @@
       object-fit: cover;
       border: 3px solid white;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      margin-bottom: 20px; /* 프로필 사진 아래 마진 추가 */
+      margin-bottom: 20px;
     }
 
     .content {
@@ -68,13 +72,11 @@
       text-decoration: none;
       color: #1a0dab;
     }
-
   </style>
 </head>
 <body>
 
 <div class="hero">
-  <!-- 프로필 사진 추가 -->
   <img src="profile.jpg" alt="Myeongseong Ko" class="profile-pic">
   <h1>Myeongseong Ko</h1>
   <h3>Indiana University Bloomington</h3>
