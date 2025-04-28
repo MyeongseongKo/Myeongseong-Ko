@@ -4,31 +4,34 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Myeongseong Ko | Affiliations</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
-      font-family: 'Times New Roman', serif;
+      font-family: 'Inter', sans-serif;
       font-size: 18px;
-      color: #333;
+      color: #222;
+      background-color: #fafafa;
       line-height: 1.6;
-      text-align: center;
-      background-color: #f8f8f8;
     }
 
     .navbar {
       position: fixed;
       top: 0;
       right: 0;
-      background-color: #990000;
-      padding: 10px 20px;
-      border-bottom-left-radius: 10px;
+      background: rgba(153, 0, 0, 0.8);
+      backdrop-filter: blur(10px);
+      padding: 12px 24px;
+      border-bottom-left-radius: 12px;
       z-index: 1000;
+      display: flex;
+      gap: 20px;
     }
 
     .navbar a {
       color: white;
-      margin-left: 15px;
       text-decoration: none;
+      font-weight: 600;
       font-size: 18px;
     }
 
@@ -37,22 +40,43 @@
     }
 
     .container {
-      margin-top: 150px;
+      margin-top: 120px;
       padding: 0 20px;
+      text-align: center;
     }
 
-    .affiliation-link {
-      font-size: 20px;
-      color: #1a0dab;
+    h1 {
+      font-size: 36px;
+      margin-bottom: 40px;
+    }
+
+    .affiliations-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 24px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .affiliation-card {
+      background-color: white;
+      padding: 24px;
+      border-radius: 12px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .affiliation-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    }
+
+    .affiliation-card a {
       text-decoration: none;
-      display: block;
-      margin: 20px 0;
+      color: #1a0dab;
+      font-weight: bold;
+      font-size: 20px;
     }
-
-    .affiliation-link:hover {
-      text-decoration: underline;
-    }
-
   </style>
 </head>
 <body>
@@ -65,22 +89,32 @@
 <div class="container">
   <h1>Affiliations</h1>
 
-  <p><a class="affiliation-link" href="http://asiaklems.net/" target="_blank">Asia KLEMS</a></p>
-
-  <p><a class="affiliation-link" href="http://crbooks.co.kr/" target="_blank">CR Books</a></p>
-
-  <p><a class="affiliation-link" href="http://www.katis.or.kr/" target="_blank">Korea Association of Trade and Industry Studies (KATIS)</a></p>
-
-  <p><a class="affiliation-link" href="https://snuac.snu.ac.kr/" target="_blank">Seoul National University Asia Center (SNUAC)</a></p>
-
-  <p><a class="affiliation-link" href="https://econ.snu.ac.kr/" target="_blank">Seoul National University Department of Economics</a></p>
-
-  <p><a class="affiliation-link" href="https://china.ulsan.ac.kr/china" target="_blank">University of Ulsan Department of Chinese Language and Literature</a></p>
-
-  <p><a class="affiliation-link" href="https://economics.ulsan.ac.kr/economics" target="_blank">University of Ulsan Department of Economics</a></p>
-
-  <p><a class="affiliation-link" href="https://www.worldbank.org/ext/en/home" target="_blank">World Bank</a></p>
-
+  <div class="affiliations-grid">
+    <div class="affiliation-card">
+      <a href="http://asiaklems.net/" target="_blank">Asia KLEMS</a>
+    </div>
+    <div class="affiliation-card">
+      <a href="http://crbooks.co.kr/" target="_blank">CR Books</a>
+    </div>
+    <div class="affiliation-card">
+      <a href="http://www.katis.or.kr/" target="_blank">Korea Association of Trade and Industry Studies (KATIS)</a>
+    </div>
+    <div class="affiliation-card">
+      <a href="https://snuac.snu.ac.kr/" target="_blank">Seoul National University Asia Center (SNUAC)</a>
+    </div>
+    <div class="affiliation-card">
+      <a href="https://econ.snu.ac.kr/" target="_blank">Seoul National University Department of Economics</a>
+    </div>
+    <div class="affiliation-card">
+      <a href="https://china.ulsan.ac.kr/china" target="_blank">University of Ulsan Department of Chinese Language and Literature</a>
+    </div>
+    <div class="affiliation-card">
+      <a href="https://economics.ulsan.ac.kr/economics" target="_blank">University of Ulsan Department of Economics</a>
+    </div>
+    <div class="affiliation-card">
+      <a href="https://www.worldbank.org/ext/en/home" target="_blank">World Bank</a>
+    </div>
+  </div>
 </div>
 
 </body>
