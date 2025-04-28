@@ -28,9 +28,9 @@ Indiana University Bloomington
 ---
 
 ## Publications
-- **Pyo, Hak-Kil, and Ko, Myeongseong.** _International Trade and Commerce._ CR Books, 2024.  
-  *(Co-author, Seoul National University Asia Center textbook project)*
-
+- **Pyo, Hak-Kil, and Kim, Younghan.** _International Trade and Commerce._ CR Books, 2024.  
+  *(Contributed selected sections as a co-author, Seoul National University Asia Center project.)*
+  
 ---
 
 ## Work in Progress
