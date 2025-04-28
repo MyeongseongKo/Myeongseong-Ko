@@ -10,43 +10,65 @@
   <style>
     body {
       font-family: 'Times New Roman', serif;
-      text-align: center;
-      margin: 20px;
+      font-size: 18px;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      color: #333;
+      background: #fff;
     }
-    img {
+    .header {
+      text-align: center;
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
+    .header img {
       border-radius: 50%;
       width: 200px;
       margin-bottom: 20px;
     }
-    h1 {
+    .header h1 {
       font-size: 36px;
       margin-bottom: 10px;
     }
-    h3, h4 {
-      margin: 5px;
+    .header h3, .header h4 {
+      margin: 5px 0;
+    }
+    .content {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+      text-align: left;
     }
     section {
-      margin-top: 30px; /* 여백 줄임 */
-      text-align: left;
-      max-width: 1000px; /* 본문 폭 넓힘 */
-      margin-left: auto;
-      margin-right: auto;
+      margin-top: 40px;
+    }
+    h2 {
+      border-bottom: 2px solid #ccc;
+      padding-bottom: 5px;
+      margin-bottom: 15px;
+    }
+    ul {
+      padding-left: 20px;
     }
     a {
       text-decoration: none;
+      color: #1a0dab;
     }
   </style>
 </head>
 <body>
 
-<div align="center">
+<div class="header">
   <img src="profile.jpg" alt="Myeongseong Ko">
-  <h1 style="font-size: 36px; font-family: 'Times New Roman', serif;">Myeongseong Ko</h1>
-  <h3 style="font-family: 'Times New Roman', serif;">Indiana University Bloomington</h3>
-  <h4 style="font-family: 'Times New Roman', serif;">Ph.D. Student, Department of Economics</h4>
-  <h4 style="font-family: 'Times New Roman', serif;">Wylie Hall, 100 South Woodlawn Avenue Bloomington, IN 47405, United States</h4>
+  <h1>Myeongseong Ko</h1>
+  <h3>Indiana University Bloomington</h3>
+  <h4>Ph.D. Student, Department of Economics</h4>
+  <h4>Wylie Hall, 100 South Woodlawn Avenue Bloomington, IN 47405, United States</h4>
   <h4><a href="mailto:myeoko@iu.edu">myeoko[at]iu[dot]edu</a></h4>
 </div>
+
+<div class="content">
 
 <section>
 <h2>Research Interests</h2>
@@ -95,6 +117,8 @@
 <h2>CV</h2>
 <p><a href="Curriculum_Vitae_MyeongseongKo_20240427.pdf">Download Full CV (PDF)</a></p>
 </section>
+
+</div>
 
 </body>
 </html>
