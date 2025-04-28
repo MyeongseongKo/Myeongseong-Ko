@@ -68,7 +68,9 @@
 
     .hero {
       height: 100vh;
-      background: url('https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center center/cover no-repeat;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -77,14 +79,21 @@
       color: white;
       text-align: center;
       overflow: hidden;
+      transition: opacity 1s ease-in-out;
+      animation: zoomEffect 30s ease-in-out infinite;
     }
 
-    .hero::after {
-      content: "";
-      position: absolute;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: rgba(0, 0, 0, 0.4);
-      z-index: 1;
+    .hero.fade-out {
+      opacity: 0;
+    }
+
+    @keyframes zoomEffect {
+      0% {
+        transform: scale(1);
+      }
+      100% {
+        transform: scale(1.1);
+      }
     }
 
     .hero-content {
@@ -250,8 +259,34 @@
   Copyright © <span id="year"></span> Myeongseong Ko
 </footer>
 
-<!-- Script -->
+<!-- Scripts -->
 <script>
+// Hero Background Change
+const hero = document.getElementById('hero');
+
+const images = [
+  '/mnt/data/globe.jpg',
+  '/mnt/data/Seoul.jpg',
+  '/mnt/data/Books.jpg',
+  '/mnt/data/flags.jpg'
+];
+
+let index = 0;
+
+function changeBackground() {
+  hero.classList.add('fade-out');
+  setTimeout(() => {
+    hero.style.backgroundImage = `url('${images[index]}')`;
+    hero.classList.remove('fade-out');
+    index = (index + 1) % images.length;
+  }, 1000);
+}
+
+// 초기 세팅
+hero.style.backgroundImage = `url('${images[0]}')`;
+
+setInterval(changeBackground, 30000); // 30초마다 배경 교체
+
 // Footer 연도 자동 업데이트
 document.getElementById('year').textContent = new Date().getFullYear();
 </script>
