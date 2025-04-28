@@ -95,24 +95,21 @@
 
   </style>
 
-<script>
-  const images = [
-    "https://myeongseongko.github.io/MyeongseongKO/images/autumn-219972_640.jpg", 
-    "https://myeongseongko.github.io/MyeongseongKO/images/aurora-1197753_640.jpg"
-  ];
-  let index = 0;
+  <script>
+    const images = [
+      "https://myeongseongko.github.io/MyeongseongKO/images/autumn-219972_640.jpg", 
+      "https://myeongseongko.github.io/MyeongseongKO/images/aurora-1197753_640.jpg"
+    ];
+    let index = 0;
 
-  function changeBackground() {
-    document.querySelector('.hero').style.backgroundImage = `url('${images[index]}')`;
-    index = (index + 1) % images.length;
-  }
+    function changeBackground() {
+      document.querySelector('.hero').style.backgroundImage = `url('${images[index]}')`;
+      index = (index + 1) % images.length;
+    }
 
-  // 페이지 로드 시 첫 번째 배경 설정
-  window.onload = function() {
-    changeBackground();
     setInterval(changeBackground, 10000); // 10초마다 배경 변경
-  };
-</script>
+    window.onload = changeBackground; // 페이지 로드 시 첫 번째 배경 설정
+  </script>
   
 </head>
 <body>
