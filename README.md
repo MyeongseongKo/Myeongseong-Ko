@@ -2,12 +2,12 @@
 
 <img src="/profile.jpg" width="200" style="border-radius: 50%; margin-bottom: 20px;" alt="Myeongseong Ko">
 
-<h1 style="font-size: 36px;">Myeongseong Ko</h1>
+<h1 style="font-size: 36px; font-family: 'Times New Roman', serif;">Myeongseong Ko</h1>
 
-<h3>Indiana University Bloomington</h3>  
-<h4>Ph.D. Student, Department of Economics</h4>  
-<h4>Wylie Hall, 100 South Woodlawn Avenue Bloomington, IN 47405, United States</h4>  
-<h4>📧 myeoko[at]iu[dot]edu</h4>
+<h3 style="font-family: 'Times New Roman', serif;">Indiana University Bloomington</h3>  
+<h4 style="font-family: 'Times New Roman', serif;">Ph.D. Student, Department of Economics</h4>  
+<h4 style="font-family: 'Times New Roman', serif;">Wylie Hall, 100 South Woodlawn Avenue Bloomington, IN 47405, United States</h4>  
+<h4><a href="mailto:myeoko@iu.edu">myeoko[at]iu[dot]edu</a></h4>
 
 </div>
 
