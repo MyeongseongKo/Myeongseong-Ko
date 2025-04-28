@@ -1,8 +1,12 @@
+<div align="center">
+
 # Myeongseong Ko
 
 Ph.D. Student, Department of Economics  
 Indiana University Bloomington  
 📧 myeoko[at]iu[dot]edu  
+
+</div>
 
 ---
 
