@@ -3,17 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Myeongseong Ko | Academic Profile</title>
-  <meta name="description" content="Myeongseong Ko's academic profile. Ph.D. student in Economics at Indiana University Bloomington.">
-  <meta name="keywords" content="Myeongseong Ko, Economics, Indiana University, International Trade, Global Value Chains, FDI, Academic Profile">
-  <meta name="author" content="Myeongseong Ko">
+  <title>Myeongseong Ko | Affiliations</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
-      font-family: 'Times New Roman', serif;
+      font-family: 'Inter', sans-serif;
       font-size: 18px;
-      color: #333;
+      color: #222;
+      background-color: #fafafa;
       line-height: 1.6;
+      animation: fadeIn 1.5s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
     }
 
     .navbar {
@@ -37,71 +42,43 @@
       text-decoration: underline;
     }
 
-    .hero {
-      background-color: #f8d7da;
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      color: black;
-      padding: 20px;
-    }
-
-    .hero h1 {
-      font-size: 50px;
-      margin-bottom: 10px;
-    }
-
-    .hero h3, .hero h4 {
-      margin: 5px;
-    }
-
-    .profile-pic {
-      width: 180px;
-      height: 180px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 3px solid white;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      margin-bottom: 20px;
-    }
-
-    .content {
-      max-width: 1200px;
-      margin: 40px auto;
+    .container {
+      margin-top: 120px;
       padding: 0 20px;
-      text-align: left;
+      text-align: center;
     }
 
-    section {
-      margin-bottom: 50px;
+    h1 {
+      font-size: 36px;
+      margin-bottom: 40px;
     }
 
-    h2 {
-      border-bottom: 2px solid #ccc;
-      padding-bottom: 5px;
-      margin-bottom: 15px;
+    .affiliations-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 24px;
+      max-width: 1000px;
+      margin: 0 auto;
     }
 
-    ul {
-      padding-left: 20px;
+    .affiliation-card {
+      background-color: white;
+      padding: 24px;
+      border-radius: 12px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
-    a {
+    .affiliation-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    }
+
+    .affiliation-card a {
       text-decoration: none;
       color: #1a0dab;
-    }
-
-    footer {
-      background-color: #990000; /* Crimson 배경 */
-      color: white;
-      text-align: right;
-      padding: 10px 20px;
-      font-size: 14px;
-      font-weight: normal;
-      margin-top: 50px;
+      font-weight: bold;
+      font-size: 20px;
     }
   </style>
 </head>
@@ -112,73 +89,39 @@
   <a href="affiliations.html">Affiliations</a>
 </div>
 
-<div class="hero" id="home">
-  <img src="profile.jpg" alt="Myeongseong Ko" class="profile-pic">
-  <h1>Myeongseong Ko</h1>
-  <h3>Indiana University Bloomington</h3>
-  <h3>Department of Economics</h3>
-  <h4>100 South Woodlawn Avenue, Bloomington, IN 47405, United States</h4>
-  <h4>Contacts: <a href="mailto:myeoko@iu.edu" style="color: black;">myeoko[at]iu[dot]edu</a></h4>
+<div class="container">
+  <h1>Affiliations</h1>
+
+  <div class="affiliations-grid">
+    <div class="affiliation-card">
+      <a href="http://asiaklems.net/" target="_blank">Asia KLEMS</a>
+    </div>
+    <div class="affiliation-card">
+      <a href="http://crbooks.co.kr/" target="_blank">CR Books</a>
+    </div>
+    <div class="affiliation-card">
+      <a href="https://economics.indiana.edu/" target="_blank">Indiana University Bloomington Department of Economics</a>
+    </div>
+    <div class="affiliation-card">
+      <a href="http://www.katis.or.kr/" target="_blank">Korea Association of Trade and Industry Studies (KATIS)</a>
+    </div>
+    <div class="affiliation-card">
+      <a href="https://snuac.snu.ac.kr/" target="_blank">Seoul National University Asia Center (SNUAC)</a>
+    </div>
+    <div class="affiliation-card">
+      <a href="https://econ.snu.ac.kr/" target="_blank">Seoul National University Department of Economics</a>
+    </div>
+    <div class="affiliation-card">
+      <a href="https://china.ulsan.ac.kr/china" target="_blank">University of Ulsan Department of Chinese Language and Literature</a>
+    </div>
+    <div class="affiliation-card">
+      <a href="https://economics.ulsan.ac.kr/economics" target="_blank">University of Ulsan Department of Economics</a>
+    </div>
+    <div class="affiliation-card">
+      <a href="https://www.worldbank.org/ext/en/home" target="_blank">World Bank</a>
+    </div>
+  </div>
 </div>
 
-<div class="content">
-
-<section>
-<h2>Research Interests</h2>
-<ul>
-  <li>International Trade (Global Value Chains and Foreign Direct Investment)</li>
-  <li>International Law (Trade Agreements)</li>
-</ul>
-</section>
-
-<section>
-<h2>Education</h2>
-<ul>
-  <li>Indiana University Bloomington, Ph.D. Economics, Expected 2029</li>
-  <li>Seoul National University, M.A. Economics, 2025</li>
-  <li>University of Ulsan, B.A. Humanities (Economics Double Major), 2019</li>
-</ul>
-</section>
-
-<section>
-<h2>Research Experience</h2>
-<ul>
-  <li>Contributor, <em>International Trade and Commerce</em> (CR Books, 2024), Seoul National University Asia Center Project<br>
-    <small>(Co-authored selected sections under the supervision of Professor Hak-Kil Pyo.)</small>
-  </li>
-  <li>Research Assistant, International Economics Research Project, Seoul National University Asia Center (Expected 2025)<br>
-    <small>(Collaborative project with Dr. Geunhee Lee (SNU Asia Center) and Dr. Shu (World Bank).)</small>
-  </li>
-</ul>
-</section>
-
-<section>
-<h2>Other Experience</h2>
-<ul>
-  <li>Administrative Secretary, Korea Association of Trade and Industry Studies (KATIS) (2024)</li>
-  <li>Intelligence Officer, Department of National Defense, South Korea (2020-2022)<br>
-    <small>(Served in the Korean Army ROTC as an intelligence officer.)</small>
-  </li>
-</ul>
-</section>
-
-<section>
-<h2>Work in Progress</h2>
-<ul>
-  <li><strong>The Effects of the U.S.-China Trade War on Korean Multinational Firms' Direct Investment in Mainland China</strong></li>
-</ul>
-</section>
-
-<section>
-<h2>Curriculum Vitae</h2>
-<p><a href="Curriculum_Vitae_MyeongseongKo_20240427.pdf" download>Download Full CV (PDF)</a></p>
-</section>
-
-</div>
-
-<footer>
-  Copyright © April 2025 Myeongseong Ko
-</footer>
-  
 </body>
 </html>
