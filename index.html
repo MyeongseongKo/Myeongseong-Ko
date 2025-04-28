@@ -16,15 +16,36 @@
       line-height: 1.6;
     }
 
+    .navbar {
+      position: fixed;
+      top: 0;
+      right: 0;
+      background-color: #990000;
+      padding: 10px 20px;
+      border-bottom-left-radius: 10px;
+      z-index: 1000;
+    }
+
+    .navbar a {
+      color: white;
+      margin-left: 15px;
+      text-decoration: none;
+      font-size: 18px;
+    }
+
+    .navbar a:hover {
+      text-decoration: underline;
+    }
+
     .hero {
-      background-color: #990000; /* Indiana University Crimson 색상 */
+      background-color: #990000;
       height: 100vh;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       text-align: center;
-      color: white; /* 텍스트 색상을 흰색으로 변경 */
+      color: white;
       padding: 20px;
     }
 
@@ -76,7 +97,12 @@
 </head>
 <body>
 
-<div class="hero">
+<div class="navbar">
+  <a href="index.html">Home</a>
+  <a href="cv.html">CV</a>
+</div>
+
+<div class="hero" id="home">
   <img src="profile.jpg" alt="Myeongseong Ko" class="profile-pic">
   <h1>Myeongseong Ko</h1>
   <h3>Indiana University Bloomington</h3>
@@ -108,9 +134,11 @@
 <h2>Research Experience</h2>
 <ul>
   <li>Contributor, <em>International Trade and Commerce</em> (CR Books, 2024), Seoul National University Asia Center Project<br>
-  <small>(Co-authored selected sections under the supervision of Professor Hak-Kil Pyo.)</small></li>
+    <small>(Co-authored selected sections under the supervision of Professor Hak-Kil Pyo.)</small>
+  </li>
   <li>Research Assistant, International Economics Research Project, Seoul National University Asia Center (Expected 2025)<br>
-  <small>(Collaborative project with Dr. Geunhee Lee (SNU Asia Center) and Dr. Shu (World Bank).)</small></li>
+    <small>(Collaborative project with Dr. Geunhee Lee (SNU Asia Center) and Dr. Shu (World Bank).)</small>
+  </li>
 </ul>
 </section>
 
@@ -119,7 +147,8 @@
 <ul>
   <li>Administrative Secretary, Korea Association of Trade and Industry Studies (KATIS) (2024)</li>
   <li>Intelligence Officer, Department of National Defense, South Korea (2020-2022)<br>
-  <small>(Served in the Korean Army ROTC as an intelligence officer.)</small></li>
+    <small>(Served in the Korean Army ROTC as an intelligence officer.)</small>
+  </li>
 </ul>
 </section>
 
@@ -128,11 +157,6 @@
 <ul>
   <li><strong>The Effects of the U.S.-China Trade War on Korean Multinational Firms' Direct Investment in Mainland China</strong></li>
 </ul>
-</section>
-
-<section>
-<h2>CV</h2>
-<p><a href="Curriculum_Vitae_MyeongseongKo_20240427.pdf">Download Full CV (PDF)</a></p>
 </section>
 
 </div>
