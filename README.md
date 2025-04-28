@@ -3,7 +3,9 @@
 # Myeongseong Ko
 
 Ph.D. Student, Department of Economics  
+Department of Economics, Wylie Hall  
 Indiana University Bloomington  
+100 South Woodlawn Avenue, Bloomington, IN 47405, United States  
 📧 myeoko[at]iu[dot]edu  
 
 </div>
