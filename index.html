@@ -15,6 +15,7 @@
       color: #333;
       line-height: 1.6;
       background-color: #f4f4f9;
+      transition: background-image 1s ease-in-out;
     }
     header {
       display: flex;
@@ -154,6 +155,23 @@
   <h2>CV</h2>
   <p><a href="Curriculum_Vitae_MyeongseongKo_20240427.pdf" class="cv-link">Download Full CV (PDF)</a></p>
 </section>
+
+<script>
+  const images = [
+    "/mnt/data/IUB_GATE.png",  // Indiana University Gate Image
+    "/mnt/data/SNU_GATE.jpg",  // Seoul National University Gate Image
+    "/mnt/data/UOU_Campus_Gate.jpg"  // University of Ulsan Gate Image
+  ];
+  let index = 0;
+
+  function changeBackground() {
+    document.body.style.backgroundImage = `url('${images[index]}')`;
+    index = (index + 1) % images.length;
+  }
+
+  setInterval(changeBackground, 10000); // 10초마다 배경 이미지 변경
+  changeBackground(); // 초기 배경 설정
+</script>
 
 </body>
 </html>
