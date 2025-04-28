@@ -34,6 +34,16 @@
     .hero h3, .hero h4 {
       margin: 5px;
     }
+    /* 프로필 사진 스타일링 */
+    .profile-pic {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid white;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      margin-bottom: 20px; /* 프로필 사진 아래 마진 추가 */
+    }
     .content {
       max-width: 1200px;
       margin: 40px auto;
@@ -54,16 +64,6 @@
     a {
       text-decoration: none;
       color: #1a0dab;
-    }
-    /* 프로필 사진 스타일링 */
-    .profile-pic {
-      width: 180px;
-      height: 180px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 3px solid white;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      margin-top: 20px;
     }
   </style>
   <script>
@@ -86,11 +86,11 @@
 <body>
 
 <div class="hero">
+  <!-- 프로필 사진 위로 배치 -->
+  <img src="profile.jpg" alt="Myeongseong Ko" class="profile-pic">
   <h1>Myeongseong Ko</h1>
   <h3>Indiana University Bloomington</h3>
   <h4>Ph.D. Student, Department of Economics</h4>
-  <!-- 프로필 사진 -->
-  <img src="profile.jpg" alt="Myeongseong Ko" class="profile-pic">
 </div>
 
 <div class="content">
