@@ -16,6 +16,21 @@
       line-height: 1.6;
       background-color: #f4f4f9;
     }
+    header {
+      background-color: #fff;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    header img {
+      width: 50px;
+    }
     .content {
       max-width: 1200px;
       margin: 40px auto;
@@ -96,6 +111,12 @@
 </head>
 <body>
 
+<header>
+  <!-- IU Seal on the left side -->
+  <img src="/mnt/data/Indiana_University_seal.svg.png" alt="Indiana University Seal">
+  <h1>My Academic Profile</h1>
+</header>
+
 <div class="content">
 
   <!-- Text Content (Research Interests) -->
@@ -136,3 +157,4 @@
 
 </body>
 </html>
+
