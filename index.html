@@ -55,6 +55,16 @@
       text-decoration: none;
       color: #1a0dab;
     }
+    /* 프로필 사진 스타일링 */
+    .profile-pic {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid white;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      margin-top: 20px;
+    }
   </style>
   <script>
     const images = [
@@ -65,9 +75,8 @@
     let index = 0;
 
     function changeBackground() {
-      // 배경 이미지 변경 (문자열 보간법 사용)
       document.querySelector('.hero').style.backgroundImage = `url('${images[index]}')`;
-      index = (index + 1) % images.length; // 배열 길이만큼 순환
+      index = (index + 1) % images.length;
     }
 
     setInterval(changeBackground, 10000); // 10초마다 배경 변경
@@ -80,6 +89,8 @@
   <h1>Myeongseong Ko</h1>
   <h3>Indiana University Bloomington</h3>
   <h4>Ph.D. Student, Department of Economics</h4>
+  <!-- 프로필 사진 -->
+  <img src="profile.jpg" alt="Myeongseong Ko" class="profile-pic">
 </div>
 
 <div class="content">
