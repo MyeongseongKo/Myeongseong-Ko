@@ -2,7 +2,7 @@
 
 Ph.D. Student, Department of Economics  
 Indiana University Bloomington  
-📧 myeoko@iu.edu  
+📧 myeoko[at]iu[dot]edu  
 
 ---
 
