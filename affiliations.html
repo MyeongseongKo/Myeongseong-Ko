@@ -4,7 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Myeongseong Ko | Affiliations</title>
+
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
   <style>
     body {
       margin: 0;
@@ -74,14 +80,33 @@
       box-shadow: 0 10px 20px rgba(0,0,0,0.15);
     }
 
+    .affiliation-card i {
+      font-size: 36px;
+      color: #990000;
+      margin-bottom: 10px;
+    }
+
     .affiliation-card a {
+      display: inline-block;
       text-decoration: none;
       color: #1a0dab;
       font-weight: bold;
       font-size: 20px;
+      margin-top: 10px;
+    }
+
+    footer {
+      background-color: #990000;
+      color: white;
+      text-align: right;
+      padding: 10px 20px;
+      font-size: 14px;
+      font-weight: normal;
+      margin-top: 50px;
     }
   </style>
 </head>
+
 <body>
 
 <div class="navbar">
@@ -93,35 +118,62 @@
   <h1>Affiliations</h1>
 
   <div class="affiliations-grid">
+
     <div class="affiliation-card">
+      <i class="fas fa-globe"></i><br>
       <a href="http://asiaklems.net/" target="_blank">Asia KLEMS</a>
     </div>
+
     <div class="affiliation-card">
+      <i class="fas fa-book"></i><br>
       <a href="http://crbooks.co.kr/" target="_blank">CR Books</a>
     </div>
+
     <div class="affiliation-card">
+      <i class="fas fa-university"></i><br>
       <a href="https://economics.indiana.edu/" target="_blank">Indiana University Bloomington Department of Economics</a>
     </div>
+
     <div class="affiliation-card">
+      <i class="fas fa-industry"></i><br>
       <a href="http://www.katis.or.kr/" target="_blank">Korea Association of Trade and Industry Studies (KATIS)</a>
     </div>
+
     <div class="affiliation-card">
+      <i class="fas fa-school"></i><br>
       <a href="https://snuac.snu.ac.kr/" target="_blank">Seoul National University Asia Center (SNUAC)</a>
     </div>
+
     <div class="affiliation-card">
+      <i class="fas fa-graduation-cap"></i><br>
       <a href="https://econ.snu.ac.kr/" target="_blank">Seoul National University Department of Economics</a>
     </div>
+
     <div class="affiliation-card">
+      <i class="fas fa-language"></i><br>
       <a href="https://china.ulsan.ac.kr/china" target="_blank">University of Ulsan Department of Chinese Language and China Studies</a>
     </div>
+
     <div class="affiliation-card">
+      <i class="fas fa-graduation-cap"></i><br>
       <a href="https://economics.ulsan.ac.kr/economics" target="_blank">University of Ulsan Department of Economics</a>
     </div>
+
     <div class="affiliation-card">
+      <i class="fas fa-globe"></i><br>
       <a href="https://www.worldbank.org/ext/en/home" target="_blank">World Bank</a>
     </div>
+
   </div>
 </div>
+
+<footer>
+  Copyright © <span id="year"></span> Myeongseong Ko
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
 
 </body>
 </html>
