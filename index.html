@@ -16,41 +16,38 @@
       line-height: 1.6;
       background-color: #f4f4f9;
     }
-    .hero {
-      background-size: cover;
-      background-position: center;
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      color: white;
-      position: relative;
-      transition: background-image 1s ease-in-out;
-    }
-    .hero img {
-      width: 180px;
-      height: 180px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 3px solid white;
-      margin-bottom: 20px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
-    .hero h1 {
-      font-size: 60px;
-      margin-bottom: 10px;
-    }
-    .hero h3, .hero h4 {
-      margin: 5px;
-      font-size: 22px;
-    }
     .content {
       max-width: 1200px;
       margin: 40px auto;
       padding: 0 20px;
       text-align: left;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .text-content {
+      max-width: 60%;
+    }
+    .image-content {
+      max-width: 35%;
+      text-align: center;
+    }
+    .image-content img {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid white;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+      font-size: 60px;
+      margin-bottom: 10px;
+    }
+    h3, h4 {
+      margin: 5px;
+      font-size: 22px;
     }
     section {
       margin-bottom: 50px;
@@ -83,87 +80,59 @@
       background-color: #4b79b8;
     }
     @media (max-width: 768px) {
-      .hero h1 {
-        font-size: 40px;
-      }
-      .hero h3, .hero h4 {
-        font-size: 18px;
-      }
       .content {
-        padding: 0 10px;
+        flex-direction: column;
+        text-align: center;
+      }
+      .text-content {
+        max-width: 100%;
+        margin-bottom: 20px;
+      }
+      .image-content {
+        max-width: 100%;
       }
     }
   </style>
-  <script>
-    const images = ["IUB_GATE.png", "SNU_GATE.jpg", "UOU_Campus_Gate.jpg"];
-    let index = 0;
-    function changeBackground() {
-      document.querySelector('.hero').style.backgroundImage = `url('${images[index]}')`;
-      index = (index + 1) % images.length;
-    }
-    setInterval(changeBackground, 10000); // 10초마다 배경 변경
-  </script>
 </head>
 <body>
 
-<div class="hero">
-  <img src="profile.jpg" alt="Myeongseong Ko">
-  <h1>Myeongseong Ko</h1>
-  <h3>Indiana University Bloomington</h3>
-  <h4>Ph.D. Student, Department of Economics</h4>
-</div>
-
 <div class="content">
 
-<section>
-<h2>Research Interests</h2>
-<ul>
-  <li>International Trade (Global Value Chains and Foreign Direct Investment)</li>
-  <li>International Law (Trade Agreements)</li>
-</ul>
-</section>
+  <!-- Text Content (Research Interests) -->
+  <div class="text-content">
+    <h1>Myeongseong Ko</h1>
+    <h3>Indiana University Bloomington</h3>
+    <h4>Ph.D. Student, Department of Economics</h4>
 
-<section>
-<h2>Education</h2>
-<ul>
-  <li>Indiana University Bloomington, Ph.D. Economics, Expected 2029</li>
-  <li>Seoul National University, M.A. Economics, 2025</li>
-  <li>University of Ulsan, B.A. Humanities (Economics Double Major), 2019</li>
-</ul>
-</section>
+    <section>
+      <h2>Research Interests</h2>
+      <ul>
+        <li>International Trade (Global Value Chains and Foreign Direct Investment)</li>
+        <li>International Law (Trade Agreements)</li>
+      </ul>
+    </section>
 
-<section>
-<h2>Research Experience</h2>
-<ul>
-  <li>Contributor, <em>International Trade and Commerce</em> (CR Books, 2024), Seoul National University Asia Center Project<br>
-  <small>(Co-authored selected sections under the supervision of Professor Hak-Kil Pyo.)</small></li>
-  <li>Research Assistant, International Economics Research Project, Seoul National University Asia Center (Expected 2025)<br>
-  <small>(Collaborative project with Dr. Geunhee Lee (SNU Asia Center) and Dr. Shu (World Bank).)</small></li>
-</ul>
-</section>
+    <section>
+      <h2>Education</h2>
+      <ul>
+        <li>Indiana University Bloomington, Ph.D. Economics, Expected 2029</li>
+        <li>Seoul National University, M.A. Economics, 2025</li>
+        <li>University of Ulsan, B.A. Humanities (Economics Double Major), 2019</li>
+      </ul>
+    </section>
+  </div>
 
-<section>
-<h2>Other Experience</h2>
-<ul>
-  <li>Administrative Secretary, Korea Association of Trade and Industry Studies (KATIS) (2024)</li>
-  <li>Intelligence Officer, Department of National Defense, South Korea (2020-2022)<br>
-  <small>(Served in the Korean Army ROTC as an intelligence officer.)</small></li>
-</ul>
-</section>
-
-<section>
-<h2>Work in Progress</h2>
-<ul>
-  <li><strong>The Effects of the U.S.-China Trade War on Korean Multinational Firms' Direct Investment in Mainland China</strong></li>
-</ul>
-</section>
-
-<section>
-<h2>CV</h2>
-<p><a href="Curriculum_Vitae_MyeongseongKo_20240427.pdf" class="cv-link">Download Full CV (PDF)</a></p>
-</section>
+  <!-- Image Content (Profile Picture) -->
+  <div class="image-content">
+    <img src="profile.jpg" alt="Myeongseong Ko">
+  </div>
 
 </div>
+
+<section>
+  <h2>CV</h2>
+  <p><a href="Curriculum_Vitae_MyeongseongKo_20240427.pdf" class="cv-link">Download Full CV (PDF)</a></p>
+</section>
 
 </body>
 </html>
