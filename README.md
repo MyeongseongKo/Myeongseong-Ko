@@ -11,7 +11,6 @@ Indiana University Bloomington
 📧 myeoko[at]iu[dot]edu  
 
 </div>
----
 
 ## Research Interests
 - International Trade (Global Value Chains and Foreign Direct Investment)
