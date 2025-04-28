@@ -17,17 +17,16 @@
     }
 
     .hero {
-      background-size: cover;
-      background-position: center center;
-      background-repeat: no-repeat;
-      height: 100vh;
+      /* 배경 이미지 없이, 흰색 배경을 적용 */
+      background-color: #f1f1f1; /* 배경색을 회색으로 설정 */
+      height: 100vh; /* 화면 전체 높이 */
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       text-align: center;
       color: black; /* 텍스트 색상을 검은색으로 변경 */
-      transition: background-image 1s ease-in-out;
+      padding: 20px;
     }
 
     .hero h1 {
@@ -76,23 +75,7 @@
       color: #1a0dab;
     }
 
-    /* Indiana University 로고 스타일링 */
-    .footer-logo {
-      text-align: center;
-      margin-top: 40px;
-      margin-bottom: 20px;
-    }
-
-    .footer-logo img {
-      width: 200px;
-      margin-bottom: 10px;
-    }
-
-    .footer-address {
-      font-size: 14px;
-      color: #555;
-    }
-
+  </style>
 </head>
 <body>
 
@@ -101,7 +84,7 @@
   <img src="profile.jpg" alt="Myeongseong Ko" class="profile-pic">
   <h1>Myeongseong Ko</h1>
   <h3>Indiana University Bloomington</h3>
-  <h4>Department of Economics</h4>
+  <h4>Ph.D. Student, Department of Economics</h4>
   <h4>100 South Woodlawn Avenue, Bloomington, IN 47405, United States</h4>
 </div>
 
