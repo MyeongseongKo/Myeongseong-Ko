@@ -35,7 +35,7 @@ Indiana University Bloomington
 ---
 
 ## Work in Progress
-- **Impact of U.S.-China Trade War on Korean Multinational Firms' Foreign Direct Investment into China**
+- **The Effects of the U.S.-China Trade War on Korean Multinational Firms' Direct Investment in Mainland China**
 
 ---
 
