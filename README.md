@@ -29,9 +29,10 @@ Indiana University Bloomington
 ---
 
 ## Other Experience
-- Administrative Secretary, Korea Association of Trade and Industry Studies (KATIS)
-- Intelligence Officer, Department of National Defense, South Korea
-
+- Administrative Secretary, Korea Association of Trade and Industry Studies (KATIS) (2024)  
+- Intelligence Officer, Department of National Defense, South Korea (2020-2022)  
+  *(Served in the Korean Army ROTC as an intelligence officer.)*
+  
 ---
 
 ## Work in Progress
