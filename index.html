@@ -18,14 +18,15 @@
 
     .hero {
       background-size: cover;
-      background-position: center;
+      background-position: center center;
+      background-repeat: no-repeat;
       height: 100vh;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       text-align: center;
-      color: white;
+      color: black; /* 텍스트 색상을 검은색으로 변경 */
       transition: background-image 1s ease-in-out;
     }
 
@@ -36,6 +37,17 @@
 
     .hero h3, .hero h4 {
       margin: 5px;
+    }
+
+    /* 프로필 사진 스타일링 */
+    .profile-pic {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid white;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      margin-bottom: 20px; /* 프로필 사진 아래 마진 추가 */
     }
 
     .content {
@@ -63,23 +75,38 @@
       text-decoration: none;
       color: #1a0dab;
     }
+
+    /* Indiana University 로고 스타일링 */
+    .footer-logo {
+      text-align: center;
+      margin-top: 40px;
+      margin-bottom: 20px;
+    }
+
+    .footer-logo img {
+      width: 200px;
+      margin-bottom: 10px;
+    }
+
+    .footer-address {
+      font-size: 14px;
+      color: #555;
+    }
+
   </style>
 
   <script>
-    // 이미지 경로를 배열에 저장
     const images = [
       "https://myeongseongko.github.io/MyeongseongKO/images/autumn-219972_640.jpg", 
       "https://myeongseongko.github.io/MyeongseongKO/images/aurora-1197753_640.jpg"
     ];
     let index = 0;
 
-    // 배경 이미지를 주기적으로 변경하는 함수
     function changeBackground() {
-      document.querySelector('.hero').style.backgroundImage = `url(${images[index]})`; // 템플릿 리터럴을 사용
-      index = (index + 1) % images.length; // 배열의 이미지를 순차적으로 변경
+      document.querySelector('.hero').style.backgroundImage = `url('${images[index]}')`;
+      index = (index + 1) % images.length;
     }
 
-    // 페이지 로드 후 첫 번째 배경 이미지 설정
     setInterval(changeBackground, 10000); // 10초마다 배경 변경
     window.onload = changeBackground; // 페이지 로드 시 첫 번째 배경 설정
   </script>
@@ -88,9 +115,12 @@
 <body>
 
 <div class="hero">
+  <!-- 프로필 사진 추가 -->
+  <img src="profile.jpg" alt="Myeongseong Ko" class="profile-pic">
   <h1>Myeongseong Ko</h1>
   <h3>Indiana University Bloomington</h3>
-  <h4>Ph.D. Student, Department of Economics</h4>
+  <h4>Department of Economics</h4>
+  <h4>100 South Woodlawn Avenue, Bloomington, IN 47405, United States</h4>
 </div>
 
 <div class="content">
@@ -126,24 +156,4 @@
 <h2>Other Experience</h2>
 <ul>
   <li>Administrative Secretary, Korea Association of Trade and Industry Studies (KATIS) (2024)</li>
-  <li>Intelligence Officer, Department of National Defense, South Korea (2020-2022)<br>
-  <small>(Served in the Korean Army ROTC as an intelligence officer.)</small></li>
-</ul>
-</section>
-
-<section>
-<h2>Work in Progress</h2>
-<ul>
-  <li><strong>The Effects of the U.S.-China Trade War on Korean Multinational Firms' Direct Investment in Mainland China</strong></li>
-</ul>
-</section>
-
-<section>
-<h2>CV</h2>
-<p><a href="Curriculum_Vitae_MyeongseongKo_20240427.pdf">Download Full CV (PDF)</a></p>
-</section>
-
-</div>
-
-</body>
-</html>
+  <li>Intelligence Officer, Department of National Defense, South Korea (
