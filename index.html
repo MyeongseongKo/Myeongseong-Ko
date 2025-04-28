@@ -8,17 +8,13 @@
   <meta name="keywords" content="Myeongseong Ko, Economics, Indiana University, International Trade, Global Value Chains, FDI, Academic Profile">
   <meta name="author" content="Myeongseong Ko">
 
-  <!-- Open Graph 기본 설정 (이미지 없음 처리 포함) -->
-  <meta property="og:title" content="Myeongseong Ko | Academic Profile">
-  <meta property="og:description" content="Ph.D. student in Economics at Indiana University Bloomington. Researching International Trade, FDI, and Global Value Chains.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://myeongseongko.github.io/MyeongseongKO/">
-  <meta property="og:image" content="">
+  <!-- Google Fonts (Inter) -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
 
   <style>
     body {
       margin: 0;
-      font-family: 'Times New Roman', serif;
+      font-family: 'Inter', sans-serif;
       font-size: 18px;
       color: #333;
       line-height: 1.6;
@@ -119,6 +115,7 @@
     }
   </style>
 </head>
+
 <body>
 
 <div class="navbar">
@@ -191,8 +188,12 @@
 </div>
 
 <footer>
-  Copyright © April 2025 Myeongseong Ko
+  Copyright © <span id="year"></span> Myeongseong Ko
 </footer>
-  
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
 </body>
 </html>
