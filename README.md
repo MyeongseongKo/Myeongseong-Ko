@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="/static/images/profile.jpg" width="200" alt="Myeongseong Ko">
+<img src="/profile.jpg" width="200" alt="Myeongseong Ko">
 
 # Myeongseong Ko
 
