@@ -7,12 +7,12 @@ Indiana University Bloomington
 
 ---
 
-## 🔬 Research Interest
+## Research Interest
 - International Trade: Global Value Chain, Foreign Direct Investment, International Law
 
 ---
 
-## 🎓 Education
+## Education
 - **Indiana University Bloomington**, Ph.D. in Economics (Incoming), Fall 2025 (Expected)
 - **Seoul National University**, M.A. in Economics (Requirements Completed except Thesis), 2025
 - **University of Ulsan**, B.A. in Humanities (Chinese Language and Area Studies, Double Major in Economics), Summa Cum Laude, 2019
@@ -20,7 +20,7 @@ Indiana University Bloomington
 
 ---
 
-## 💼 Working Experiences
+## Working Experiences
 - **Administrative Secretary**, Korea Association of Trade and Industry Studies (KATIS), 2024  
   Supervisor: Prof. Jee-hyeong Park ([j-hpark@snu.ac.kr](mailto:j-hpark@snu.ac.kr))  
   [KATIS Website](http://www.katis.or.kr/)
@@ -34,14 +34,14 @@ Indiana University Bloomington
 
 ---
 
-## 📚 Research Experiences
+## Research Experiences
 - **Research Assistant (Expected)**, Seoul National University Asia Center  
   Supervisor: Professor Emeritus Hak-Kil Pyo ([hakppyo@gmail.com](mailto:hakppyo@gmail.com))  
   Assisting in an international economics project with Dr. Geunhee Lee (SNU Asia Center) and Dr. Shu (World Bank)
 
 ---
 
-## 🎓 Teaching Experiences
+## Teaching Experiences
 - **Comparative Economics in East Asia**, Teaching Assistant, Spring 2025  
   Supervisor: Professor Emeritus Hak-Kil Pyo
 
@@ -59,7 +59,7 @@ Indiana University Bloomington
 
 ---
 
-## 🏆 Awards and Honors
+## Awards and Honors
 - **Brain Korea 21 Project Fellowship** (Korea Ministry of Education), 2023–2024  
   [BK21 Website](https://bk21four.nrf.re.kr/)
 
@@ -68,11 +68,11 @@ Indiana University Bloomington
 
 ---
 
-## 🛠 Skills
+## Skills
 - **Programming**: STATA (Advanced), MATLAB (Intermediate), Python (Intermediate)
 - **Languages**: Korean (Native), Chinese (Fluent), English (Advanced), Japanese (Intermediate), French (Basic)
 
 ---
 
-## 📄 CV PDF
+## CV PDF
 [Download Full CV (PDF)](./Curriculum_Vitae_MyeongseongKo_20240427.pdf)
