@@ -13,14 +13,20 @@
       color: #222;
       background-color: #fafafa;
       line-height: 1.6;
+      animation: fadeIn 1.5s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
     }
 
     .navbar {
       position: fixed;
       top: 0;
       right: 0;
-      background-color: #990000; /* 원래 스타일 유지 */
-      padding: 10px 20px; /* 원래 스타일 유지 */
+      background-color: #990000;
+      padding: 10px 20px;
       border-bottom-left-radius: 10px;
       z-index: 1000;
     }
@@ -29,7 +35,7 @@
       color: white;
       margin-left: 15px;
       text-decoration: none;
-      font-size: 18px; /* 원래 스타일 유지 */
+      font-size: 18px;
     }
 
     .navbar a:hover {
@@ -110,6 +116,9 @@
     </div>
     <div class="affiliation-card">
       <a href="https://www.worldbank.org/ext/en/home" target="_blank">World Bank</a>
+    </div>
+    <div class="affiliation-card">
+      <a href="https://economics.indiana.edu/" target="_blank">Indiana University Bloomington Department of Economics</a>
     </div>
   </div>
 </div>
