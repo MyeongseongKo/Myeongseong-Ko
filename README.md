@@ -27,5 +27,4 @@ Indiana University Bloomington
 ---
 
 ## CV
-👉 [Download Full CV (PDF)](./Curriculum_Vitae_MyeongseongKo_20240427.pdf)
-
+👉 [Download Full CV (PDF)](/static/files/Curriculum_Vitae_MyeongseongKo_20240427.pdf)
