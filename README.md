@@ -1,5 +1,7 @@
 <div align="center">
 
+<img src="/static/images/profile.jpg" width="200" alt="Myeongseong Ko">
+
 # Myeongseong Ko
 
 Ph.D. Student, Department of Economics  
@@ -9,7 +11,6 @@ Indiana University Bloomington
 📧 myeoko[at]iu[dot]edu  
 
 </div>
-
 ---
 
 ## Research Interests
