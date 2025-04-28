@@ -21,11 +21,10 @@ Indiana University Bloomington
 ---
 
 ## Experience
-- Seoul National University Asia Center
-- Seoul National University Department of Economics
-- Department of National Defense, South Korea
-- Korea Association of Trade and Industry Studies (KATIS)
-
+- TA/RA, Seoul National University Asia Center
+- TA/Ra, Seoul National University Department of Economics
+- Administrative Secretary, Korea Association of Trade and Industry Studies (KATIS)
+- Intelligence Officer, Department of National Defense, South Korea
 ---
 
 ## Publications
