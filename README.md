@@ -19,18 +19,19 @@ Indiana University Bloomington
 - University of Ulsan, B.A. Humanities (Economics Double Major), 2019
 
 ---
+## Research Experience
+- Contributor, _International Trade and Commerce_ (CR Books, 2024), Seoul National University Asia Center Project  
+  *(Co-authored selected sections under the supervision of Professor Hak-Kil Pyo.)*
 
-## Experience
-- TA/RA, Seoul National University Asia Center
-- TA/Ra, Seoul National University Department of Economics
-- Administrative Secretary, Korea Association of Trade and Industry Studies (KATIS)
-- Intelligence Officer, Department of National Defense, South Korea
+- Research Assistant, International Economics Research Project, Seoul National University Asia Center (Expected 2025)  
+  *(Collaborative project with Dr. Geunhee Lee (SNU Asia Center) and Dr. Shu (World Bank).)*
+
 ---
 
-## Publications
-- **Pyo, Hak-Kil, and Kim, Younghan.** _International Trade and Commerce._ CR Books, 2024.  
-  *(Contributed selected sections as a co-author, Seoul National University Asia Center project.)*
-  
+## Other Experience
+- Administrative Secretary, Korea Association of Trade and Industry Studies (KATIS)
+- Intelligence Officer, Department of National Defense, South Korea
+
 ---
 
 ## Work in Progress
