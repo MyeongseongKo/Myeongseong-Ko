@@ -10,10 +10,11 @@
   <style>
     body {
       margin: 0;
-      font-family: 'Times New Roman', serif;
+      font-family: 'Arial', sans-serif;
       font-size: 18px;
       color: #333;
       line-height: 1.6;
+      background-color: #f4f4f9;
     }
     .hero {
       background-size: cover;
@@ -25,14 +26,25 @@
       align-items: center;
       text-align: center;
       color: white;
+      position: relative;
       transition: background-image 1s ease-in-out;
     }
+    .hero img {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid white;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
     .hero h1 {
-      font-size: 50px;
+      font-size: 60px;
       margin-bottom: 10px;
     }
     .hero h3, .hero h4 {
       margin: 5px;
+      font-size: 22px;
     }
     .content {
       max-width: 1200px;
@@ -47,6 +59,8 @@
       border-bottom: 2px solid #ccc;
       padding-bottom: 5px;
       margin-bottom: 15px;
+      color: #444;
+      font-size: 24px;
     }
     ul {
       padding-left: 20px;
@@ -54,6 +68,30 @@
     a {
       text-decoration: none;
       color: #1a0dab;
+    }
+    .cv-link {
+      padding: 10px 20px;
+      background-color: #1a0dab;
+      color: white;
+      border-radius: 5px;
+      font-weight: bold;
+      display: inline-block;
+      margin-top: 20px;
+      transition: background-color 0.3s ease;
+    }
+    .cv-link:hover {
+      background-color: #4b79b8;
+    }
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 40px;
+      }
+      .hero h3, .hero h4 {
+        font-size: 18px;
+      }
+      .content {
+        padding: 0 10px;
+      }
     }
   </style>
   <script>
@@ -69,6 +107,7 @@
 <body>
 
 <div class="hero">
+  <img src="profile.jpg" alt="Myeongseong Ko">
   <h1>Myeongseong Ko</h1>
   <h3>Indiana University Bloomington</h3>
   <h4>Ph.D. Student, Department of Economics</h4>
@@ -121,7 +160,7 @@
 
 <section>
 <h2>CV</h2>
-<p><a href="Curriculum_Vitae_MyeongseongKo_20240427.pdf">Download Full CV (PDF)</a></p>
+<p><a href="Curriculum_Vitae_MyeongseongKo_20240427.pdf" class="cv-link">Download Full CV (PDF)</a></p>
 </section>
 
 </div>
