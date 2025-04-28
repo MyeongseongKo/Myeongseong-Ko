@@ -7,10 +7,8 @@ Indiana University Bloomington
 ---
 
 ## Research Interests
-- International Trade
-- Global Value Chains
-- Foreign Direct Investment
-
+- International Trade (Global Value Chains and Foreign Direct Investment)
+- International Law (Trade Agreements)
 ---
 
 ## Education
