@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Myeongseong Ko | Economics Ph.D. | International Trade & Global Value Chains</title>
 
-  <!-- Google Fonts (Inter) -->
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
 
   <!-- Font Awesome for Icons -->
@@ -30,7 +30,6 @@
   <meta property="twitter:description" content="Researching International Trade, Global Value Chains, and FDI. Based at Indiana University Bloomington.">
   <meta property="twitter:image" content="https://myeongseongko.github.io/MyeongseongKO/profile.jpg">
 
-  <!-- CSS -->
   <style>
     body {
       margin: 0;
@@ -69,9 +68,7 @@
 
     .hero {
       height: 100vh;
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
+      background: url('https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center center/cover no-repeat;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -80,12 +77,6 @@
       color: white;
       text-align: center;
       overflow: hidden;
-      transition: background-image 1s ease-in-out, opacity 1s ease-in-out;
-      opacity: 1;
-    }
-
-    .hero.fade-out {
-      opacity: 0;
     }
 
     .hero::after {
@@ -104,11 +95,6 @@
     .hero h1 {
       font-size: 64px;
       text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
-    }
-
-    .hero p {
-      font-size: 20px;
-      margin-top: 20px;
     }
 
     .profile-pic {
@@ -202,7 +188,6 @@
     <h3>Department of Economics</h3>
     <h4>100 South Woodlawn Avenue, Bloomington, IN 47405, United States</h4>
     <h4>Contacts: <a href="mailto:myeoko@iu.edu" style="color: white;">myeoko[at]iu[dot]edu</a></h4>
-    <p>Exploring Global Value Chains and International Trade</p>
     <a href="Curriculum_Vitae_MyeongseongKo_20240427.pdf" class="btn" download>
       <i class="fas fa-file-download"></i> Download CV
     </a>
@@ -270,33 +255,9 @@
   Copyright © <span id="year"></span> Myeongseong Ko
 </footer>
 
-<!-- Scripts -->
+<!-- Script -->
 <script>
-// Hero Background Image Change with Fade Effect
-const hero = document.getElementById('hero');
-
-const images = [
-  'https://upload.wikimedia.org/wikipedia/commons/8/80/World_map_blank_without_borders.svg',
-  'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80',
-  'https://images.unsplash.com/photo-1581091226825-cf0c8c5730c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80',
-  'https://images.unsplash.com/photo-1517433456452-f9633a875f6f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80'
-];
-
-let index = 0;
-
-function changeBackground() {
-  hero.classList.add('fade-out');
-  setTimeout(() => {
-    hero.style.backgroundImage = `url('${images[index]}')`;
-    hero.classList.remove('fade-out');
-    index = (index + 1) % images.length;
-  }, 1000);
-}
-
-changeBackground();
-setInterval(changeBackground, 10000);
-
-// Footer Year Auto Update
+// Footer 연도 자동 업데이트
 document.getElementById('year').textContent = new Date().getFullYear();
 </script>
 
