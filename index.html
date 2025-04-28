@@ -15,10 +15,12 @@
       color: #333;
       line-height: 1.6;
     }
+
     .hero {
-      background-size: cover;
-      background-position: center;
-      height: 100vh;
+      background-size: cover; /* 배경 이미지를 화면에 맞게 조정 */
+      background-position: center center; /* 이미지 중앙 배치 */
+      background-repeat: no-repeat; /* 이미지 반복 방지 */
+      height: 100vh; /* 화면 높이로 설정 */
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -27,13 +29,16 @@
       color: white;
       transition: background-image 1s ease-in-out;
     }
+
     .hero h1 {
       font-size: 50px;
       margin-bottom: 10px;
     }
+
     .hero h3, .hero h4 {
       margin: 5px;
     }
+
     /* 프로필 사진 스타일링 */
     .profile-pic {
       width: 180px;
@@ -44,64 +49,74 @@
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
       margin-bottom: 20px; /* 프로필 사진 아래 마진 추가 */
     }
+
     .content {
       max-width: 1200px;
       margin: 40px auto;
       padding: 0 20px;
       text-align: left;
     }
+
     section {
       margin-bottom: 50px;
     }
+
     h2 {
       border-bottom: 2px solid #ccc;
       padding-bottom: 5px;
       margin-bottom: 15px;
     }
+
     ul {
       padding-left: 20px;
     }
+
     a {
       text-decoration: none;
       color: #1a0dab;
     }
+
     /* Indiana University 로고 스타일링 */
     .footer-logo {
       text-align: center; /* 중앙 정렬 */
       margin-top: 40px;
       margin-bottom: 20px;
     }
+
     .footer-logo img {
       width: 200px; /* 로고 크기 증가 */
       margin-bottom: 10px; /* 로고와 주소 사이 여백 추가 */
     }
+
     .footer-address {
       font-size: 14px;
       color: #555;
     }
+
   </style>
   
-<script>
-  const images = [
-    "https://myeongseongko.github.io/MyeongseongKO/images/mountains-8025144_1280.jpg", 
-    "https://myeongseongko.github.io/MyeongseongKO/images/autumn-219972_640.jpg", 
-    "https://myeongseongko.github.io/MyeongseongKO/images/aurora-1197753_640.jpg"
-  ];
-  let index = 0;
+  <script>
+    const images = [
+      "https://myeongseongko.github.io/MyeongseongKO/images/mountains-8025144_1280.jpg", 
+      "https://myeongseongko.github.io/MyeongseongKO/images/autumn-219972_640.jpg", 
+      "https://myeongseongko.github.io/MyeongseongKO/images/aurora-1197753_640.jpg"
+    ];
+    let index = 0;
 
-  function changeBackground() {
-    document.querySelector('.hero').style.backgroundImage = `url('${images[index]}')`;
-    index = (index + 1) % images.length;
-  }
+    function changeBackground() {
+      document.querySelector('.hero').style.backgroundImage = `url('${images[index]}')`;
+      index = (index + 1) % images.length;
+    }
 
-  setInterval(changeBackground, 10000); // 10초마다 배경 변경
-  window.onload = changeBackground; // 페이지 로드 시 첫 번째 배경 설정
-</script>
+    setInterval(changeBackground, 10000); // 10초마다 배경 변경
+    window.onload = changeBackground; // 페이지 로드 시 첫 번째 배경 설정
+  </script>
   
 </head>
 <body>
 
 <div class="hero">
+  <img src="profile.jpg" alt="Myeongseong Ko" class="profile-pic">
   <h1>Myeongseong Ko</h1>
   <h3>Indiana University Bloomington</h3>
   <h4>Department of Economics</h4>
