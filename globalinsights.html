@@ -8,14 +8,13 @@
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
 
-  <!-- CSS 스타일 -->
   <style>
     body {
       margin: 0;
       font-family: 'Inter', sans-serif;
       font-size: 18px;
-      color: #222;
       background-color: #fafafa;
+      color: #222;
       line-height: 1.6;
       animation: fadeIn 1.5s ease-in;
     }
@@ -78,11 +77,6 @@
       text-align: center;
     }
 
-    h1 {
-      font-size: 36px;
-      margin-bottom: 30px;
-    }
-
     .news-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -124,56 +118,81 @@
       font-weight: bold;
     }
 
+    .tabs {
+      margin-top: 40px;
+      text-align: center;
+    }
+
+    .tab-button {
+      background: #990000;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      margin: 5px;
+      font-size: 18px;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .tab-button:hover {
+      background: #770000;
+    }
+
+    .tab-content {
+      display: none;
+      margin-top: 20px;
+      padding: 0 20px;
+      text-align: center;
+      animation: fadeIn 0.5s ease-in;
+    }
+
+    .tab-content ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .tab-content li {
+      margin-bottom: 10px;
+    }
+
+    .tab-content a {
+      text-decoration: none;
+      color: #1a0dab;
+      font-weight: bold;
+    }
+
+    .top-news {
+      margin: 40px 20px;
+      text-align: center;
+    }
+
+    .top-news h2 {
+      margin-bottom: 20px;
+    }
+
+    .top-news ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .top-news li {
+      margin-bottom: 10px;
+    }
+
+    .top-news a {
+      text-decoration: none;
+      color: #1a0dab;
+      font-weight: bold;
+    }
+
     footer {
       background-color: #990000;
       color: white;
       text-align: right;
       padding: 10px 20px;
       font-size: 14px;
-      font-weight: normal;
       margin-top: 50px;
-    }
-
-    /* 🌍 글로벌 뉴스 광고 박스 스타일 */
-    .news-ads {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: white;
-      border: 2px solid #990000;
-      border-radius: 10px;
-      padding: 15px;
-      width: 220px;
-      box-shadow: 0 6px 12px rgba(0,0,0,0.15);
-      z-index: 1000;
-      animation: fadeIn 1.5s ease-in;
-    }
-
-    .news-ads h5 {
-      margin-top: 0;
-      margin-bottom: 10px;
-      font-size: 18px;
-      color: #990000;
-    }
-
-    .news-ads ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-
-    .news-ads li {
-      margin-bottom: 8px;
-    }
-
-    .news-ads a {
-      color: #1a0dab;
-      text-decoration: none;
-      font-size: 14px;
-    }
-
-    .news-ads a:hover {
-      text-decoration: underline;
     }
   </style>
 </head>
@@ -187,38 +206,74 @@
   <a href="affiliations.html">Affiliations</a>
 </div>
 
-<!-- Hero Banner -->
+<!-- Hero Section -->
 <div class="hero-banner">
   <div class="hero-text">Global Insights</div>
 </div>
 
-<!-- Main Container -->
+<!-- Main Content -->
 <div class="container">
 
   <div class="news-grid">
     <div class="news-card">
       <h4>Geopolitical Risks, FDI, and GVC Fragmentation (2025)</h4>
       <p>According to recent reports by BBC and IMF, trade policy uncertainty (TPU) and geopolitical risks are on the rise globally. 
-      Prior research shows that higher TPU negatively affects firms' export, investment, and FDI decisions — see Alessandria et al. (2022, <em>A Bridge on Economic Issues between China and the World</em>), Handley and Limão (2017, <em>American Economic Review</em>), and Helpman, Melitz, and Yeaple (2004, <em>American Economic Review</em>). 
-      Furthermore, Julio and Yook (2016, <em>Journal of International Economics</em>) provide strong evidence that rising political risk makes overseas investment decisions significantly harder for firms. 
-      Considering that FDI plays a crucial role in strengthening global value chains (GVCs), increasing uncertainty inevitably threatens the stability and expansion of GVC networks.
-      </p>
-      <p><em>My Comment:</em> Firms now face an environment where international investment decisions are structurally constrained by persistent policy and political uncertainty — with profound long-term implications for global economic integration.</p>
+      Prior research shows that higher TPU negatively affects firms' export, investment, and FDI decisions...</p>
+      <p><em>My Comment:</em> Firms now face an environment where international investment decisions are structurally constrained by persistent policy and political uncertainty.</p>
       <a href="https://www.bbc.co.uk/news/articles/c4g45zp77y5o" target="_blank">View BBC Report →</a><br>
       <a href="https://www.reuters.com/business/imf-world-bank-meetings-end-with-little-tariff-clarity-economic-foreboding-2025-04-27/" target="_blank">View Reuters Coverage →</a>
     </div>
   </div>
-</div>
 
-<!-- 🌍 글로벌 뉴스 추천 박스 -->
-<div class="news-ads">
-  <h5>🌍 Trending News</h5>
-  <ul>
-    <li><a href="https://www.bbc.com/news/world" target="_blank">BBC World News →</a></li>
-    <li><a href="https://edition.cnn.com/world" target="_blank">CNN World →</a></li>
-    <li><a href="https://www.foxnews.com/world" target="_blank">FOX News World →</a></li>
-    <li><a href="https://abcnews.go.com/International" target="_blank">ABC News International →</a></li>
-  </ul>
+  <!-- Top Recommended News -->
+  <div class="top-news">
+    <h2>🌍 Recommended News</h2>
+    <ul>
+      <li><a href="https://en.yna.co.kr/" target="_blank">🇰🇷 Yonhap News (Korea) →</a></li>
+      <li><a href="https://www.bloomberg.com" target="_blank">🇺🇸 Bloomberg Global →</a></li>
+      <li><a href="https://www.reuters.com/news/world" target="_blank">🇬🇧 Reuters World →</a></li>
+    </ul>
+  </div>
+
+  <!-- Tabs for Global News -->
+  <div class="tabs">
+    <button class="tab-button" onclick="openTab('asia')">🌏 Asia</button>
+    <button class="tab-button" onclick="openTab('america')">🌎 America</button>
+    <button class="tab-button" onclick="openTab('europe')">🌍 Europe</button>
+  </div>
+
+  <!-- Tab Contents -->
+
+  <div id="asia" class="tab-content">
+    <h2>🌏 Asia News</h2>
+    <ul>
+      <li><a href="https://en.yna.co.kr/" target="_blank">🇰🇷 Yonhap News (Korea) →</a></li>
+      <li><a href="http://www.koreaherald.com/" target="_blank">🇰🇷 Korea Herald →</a></li>
+      <li><a href="https://www.cgtn.com/world" target="_blank">🇨🇳 CGTN (China) →</a></li>
+      <li><a href="https://www3.nhk.or.jp/nhkworld/en/news/" target="_blank">🇯🇵 NHK World (Japan) →</a></li>
+    </ul>
+  </div>
+
+  <div id="america" class="tab-content">
+    <h2>🌎 America News</h2>
+    <ul>
+      <li><a href="https://edition.cnn.com/world" target="_blank">🇺🇸 CNN World →</a></li>
+      <li><a href="https://www.foxnews.com/world" target="_blank">🇺🇸 FOX News →</a></li>
+      <li><a href="https://www.bloomberg.com" target="_blank">🇺🇸 Bloomberg Global →</a></li>
+      <li><a href="https://abcnews.go.com/International" target="_blank">🇺🇸 ABC News International →</a></li>
+    </ul>
+  </div>
+
+  <div id="europe" class="tab-content">
+    <h2>🌍 Europe News</h2>
+    <ul>
+      <li><a href="https://www.bbc.com/news/world" target="_blank">🇬🇧 BBC World News →</a></li>
+      <li><a href="https://www.reuters.com/news/world" target="_blank">🇬🇧 Reuters World →</a></li>
+      <li><a href="https://www.ft.com/world" target="_blank">🇬🇧 Financial Times →</a></li>
+      <li><a href="https://www.dw.com/en/top-stories/world/s-1429" target="_blank">🇩🇪 Deutsche Welle (Germany) →</a></li>
+    </ul>
+  </div>
+
 </div>
 
 <!-- Footer -->
@@ -228,6 +283,14 @@
 
 <script>
   document.getElementById('year').textContent = new Date().getFullYear();
+
+  function openTab(tabId) {
+    var tabs = document.getElementsByClassName('tab-content');
+    for (var i = 0; i < tabs.length; i++) {
+      tabs[i].style.display = 'none';
+    }
+    document.getElementById(tabId).style.display = 'block';
+  }
 </script>
 
 </body>
