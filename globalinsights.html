@@ -18,56 +18,38 @@
     }
 
     .navbar {
-      position: fixed;
-      top: 0;
-      right: 0;
+      position: fixed; top: 0; right: 0;
       background-color: #990000;
       padding: 10px 20px;
       border-bottom-left-radius: 10px;
       z-index: 1000;
     }
-
     .navbar a {
-      color: white;
-      margin-left: 15px;
-      text-decoration: none;
-      font-size: 18px;
+      color: white; margin-left: 15px;
+      text-decoration: none; font-size: 18px;
     }
-
-    .navbar a:hover {
-      text-decoration: underline;
-    }
+    .navbar a:hover { text-decoration: underline; }
 
     .hero-banner {
-      width: 100%;
-      height: 350px;
-      background: url('globalnetworks.jpg') center center/cover no-repeat;
+      width: 100%; height: 350px;
+      background: url('globalnetworks.jpg') center/cover no-repeat;
       position: relative;
     }
-
     .hero-banner::after {
-      content: "";
-      position: absolute;
+      content: ""; position: absolute;
       top: 0; left: 0; right: 0; bottom: 0;
-      background: rgba(0, 0, 0, 0.3);
+      background: rgba(0,0,0,0.3);
     }
-
     .hero-text {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      color: white;
-      font-size: 48px;
-      font-weight: bold;
+      position: absolute; top: 50%; left: 50%;
+      transform: translate(-50%,-50%);
+      color: white; font-size: 48px; font-weight: bold;
       text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
       z-index: 1;
     }
 
     .container {
-      margin-top: 30px;
-      padding: 20px;
-      text-align: center;
+      margin-top: 30px; padding: 20px; text-align: center;
     }
 
     .news-card {
@@ -75,24 +57,20 @@
       padding: 30px;
       border-radius: 10px;
       box-shadow: 0 6px 12px rgba(0,0,0,0.1);
-      margin-bottom: 30px;
-      text-align: left;
+      margin: 0 auto 30px;
       max-width: 800px;
-      margin-left: auto;
-      margin-right: auto;
+      text-align: center; /* 제목 중앙 정렬 */
     }
-
     .news-card h4 {
       margin-top: 0;
       font-size: 24px;
       color: #333;
     }
-
     .news-card p {
       font-size: 18px;
       color: #555;
+      text-align: left; /* 본문 좌측 정렬 */
     }
-
     .news-card a {
       display: inline-block;
       margin-top: 10px;
@@ -103,9 +81,7 @@
 
     /* 우측 하단 글로벌 뉴스 박스 */
     .news-box {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
+      position: fixed; bottom: 20px; right: 20px;
       width: 280px;
       background: white;
       border: 2px solid #990000;
@@ -115,39 +91,36 @@
       padding: 15px;
       animation: fadeIn 1s ease-in;
     }
-
     .news-box h5 {
-      margin-top: 0;
+      margin: 0 0 10px;
       font-size: 18px;
       color: #990000;
-      margin-bottom: 10px;
     }
-
-    .news-box ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-
-    .news-box li {
-      margin-bottom: 8px;
-    }
-
+    .news-box ul { list-style: none; padding: 0; margin: 0; }
+    .news-box li { margin-bottom: 8px; }
     .news-box a {
       color: #1a0dab;
       text-decoration: none;
       font-size: 14px;
     }
+    .news-box a:hover { text-decoration: underline; }
 
-    .news-box a:hover {
-      text-decoration: underline;
+    .view-details {
+      display: block;
+      margin-top: 10px;
+      background: #990000;
+      color: white;
+      border: none;
+      padding: 6px 12px;
+      font-size: 14px;
+      border-radius: 5px;
+      cursor: pointer;
     }
+    .view-details:hover { background: #770000; }
 
     .tab-buttons {
-      margin-top: 10px;
-      text-align: center;
+      margin-top: 10px; text-align: center;
     }
-
     .tab-buttons button {
       background: #990000;
       color: white;
@@ -159,10 +132,7 @@
       cursor: pointer;
       transition: background 0.3s ease;
     }
-
-    .tab-buttons button:hover {
-      background: #770000;
-    }
+    .tab-buttons button:hover { background: #770000; }
 
     .tab-content {
       display: none;
@@ -171,142 +141,136 @@
     }
 
     .close-btn {
-      position: absolute;
-      top: 5px;
-      right: 10px;
-      background: none;
-      border: none;
-      font-size: 18px;
-      color: #990000;
+      position: absolute; top: 5px; right: 10px;
+      background: none; border: none;
+      font-size: 18px; color: #990000;
       cursor: pointer;
     }
-
-    .close-btn:hover {
-      color: #770000;
-    }
+    .close-btn:hover { color: #770000; }
 
     .reopen-btn {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: #990000;
-      color: white;
-      border: none;
-      padding: 10px 20px;
-      border-radius: 20px;
-      font-size: 16px;
-      display: none;
-      z-index: 998;
+      position: fixed; bottom: 20px; right: 20px;
+      background: #990000; color: white;
+      border: none; padding: 10px 20px;
+      border-radius: 20px; font-size: 16px;
+      display: none; z-index: 998;
       cursor: pointer;
     }
+    .reopen-btn:hover { background: #770000; }
 
-    .reopen-btn:hover {
-      background: #770000;
+    /* footer 색상 복원 */
+    footer {
+      background-color: #990000;
+      color: white;
+      text-align: right;
+      padding: 10px 20px;
+      font-size: 14px;
     }
 
     @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
+      from { opacity: 0; } to { opacity: 1; }
     }
   </style>
 </head>
 
 <body>
 
-<!-- Navbar -->
-<div class="navbar">
-  <a href="index.html">Home</a>
-  <a href="globalinsights.html">Global Insights</a>
-  <a href="affiliations.html">Affiliations</a>
-</div>
-
-<!-- Hero -->
-<div class="hero-banner">
-  <div class="hero-text">Global Insights</div>
-</div>
-
-<!-- Main Content -->
-<div class="container">
-
-  <div class="news-card">
-    <h4>Geopolitical Risks, FDI, and GVC Fragmentation (2025)</h4>
-    <p>According to recent reports by BBC and IMF, trade policy uncertainty (TPU) and geopolitical risks are on the rise globally.
-    Prior research shows that higher TPU negatively affects firms' export, investment, and FDI decisions — see Alessandria et al. (2022, <em>A Bridge on Economic Issues between China and the World</em>), Handley and Limão (2017, <em>American Economic Review</em>), and Helpman, Melitz, and Yeaple (2004, <em>American Economic Review</em>). Furthermore, Julio and Yook (2016, <em>Journal of International Economics</em>) provide strong evidence that rising political risk makes overseas investment decisions significantly harder for firms. Considering that FDI plays a crucial role in strengthening global value chains (GVCs), increasing uncertainty inevitably threatens the stability and expansion of GVC networks.</p>
-    <p><em>My Comment:</em> Firms now face an environment where international investment decisions are structurally constrained by persistent policy and political uncertainty — with profound long-term implications for global economic integration.</p>
-    <a href="https://www.bbc.co.uk/news/articles/c4g45zp77y5o" target="_blank">View BBC Report →</a><br>
-    <a href="https://www.reuters.com/business/imf-world-bank-meetings-end-with-little-tariff-clarity-economic-foreboding-2025-04-27/" target="_blank">View Reuters Coverage →</a>
+  <!-- Navbar -->
+  <div class="navbar">
+    <a href="index.html">Home</a>
+    <a href="globalinsights.html">Global Insights</a>
+    <a href="affiliations.html">Affiliations</a>
   </div>
 
-</div>
-
-<!-- 글로벌 뉴스 박스 -->
-<div class="news-box" id="newsBox">
-  <button class="close-btn" onclick="closeBox()">×</button>
-  <h5>🌍 Recommended News</h5>
-  <ul id="topNews">
-    <li><a href="https://en.yna.co.kr/" target="_blank">🇰🇷 Yonhap News (Korea)</a></li>
-    <li><a href="https://www.bloomberg.com" target="_blank">🇺🇸 Bloomberg Global</a></li>
-    <li><a href="https://www.reuters.com/news/world" target="_blank">🇬🇧 Reuters World</a></li>
-  </ul>
-  <div class="tab-buttons">
-    <button onclick="openTab('asia')">Asia</button>
-    <button onclick="openTab('america')">America</button>
-    <button onclick="openTab('europe')">Europe</button>
+  <!-- Hero -->
+  <div class="hero-banner">
+    <div class="hero-text">Global Insights</div>
   </div>
-  <div id="asia" class="tab-content">
-    <ul>
-      <li><a href="https://en.yna.co.kr/" target="_blank">🇰🇷 Yonhap News</a></li>
-      <li><a href="http://www.koreaherald.com/" target="_blank">🇰🇷 Korea Herald</a></li>
-      <li><a href="https://www.cgtn.com/world" target="_blank">🇨🇳 CGTN</a></li>
-      <li><a href="https://www3.nhk.or.jp/nhkworld/en/news/" target="_blank">🇯🇵 NHK World</a></li>
+
+  <!-- Main Content -->
+  <div class="container">
+    <div class="news-card">
+      <h4>Geopolitical Risks, FDI, and GVC Fragmentation (2025)</h4>
+      <p>According to recent reports by BBC and IMF, trade policy uncertainty (TPU) and geopolitical risks are on the rise globally.
+      Prior research shows that higher TPU negatively affects firms' export, investment, and FDI decisions — see Alessandria et al. (2022, <em>A Bridge on Economic Issues between China and the World</em>), Handley and Limão (2017, <em>American Economic Review</em>), and Helpman, Melitz, and Yeaple (2004, <em>American Economic Review</em>). Furthermore, Julio and Yook (2016, <em>Journal of International Economics</em>) provide strong evidence that rising political risk makes overseas investment decisions significantly harder for firms. Considering that FDI plays a crucial role in strengthening global value chains (GVCs), increasing uncertainty inevitably threatens the stability and expansion of GVC networks.</p>
+      <p><em>My Comment:</em> Firms now face an environment where international investment decisions are structurally constrained by persistent policy and political uncertainty — with profound long-term implications for global economic integration.</p>
+      <a href="https://www.bbc.co.uk/news/articles/c4g45zp77y5o" target="_blank">View BBC Report →</a><br>
+      <a href="https://www.reuters.com/business/imf-world-bank-meetings-end-with-little-tariff-clarity-economic-foreboding-2025-04-27/" target="_blank">View Reuters Coverage →</a>
+    </div>
+  </div>
+
+  <!-- 글로벌 뉴스 박스 -->
+  <div class="news-box" id="newsBox">
+    <button class="close-btn" onclick="closeBox()">×</button>
+    <h5>Recommended Global News</h5>
+    <ul id="topNews">
+      <li><a href="https://en.yna.co.kr/" target="_blank">🇰🇷 Yonhap News (Korea)</a></li>
+      <li><a href="https://www.bloomberg.com" target="_blank">🇺🇸 Bloomberg Global</a></li>
+      <li><a href="https://www.reuters.com/news/world" target="_blank">🇬🇧 Reuters World</a></li>
     </ul>
+    <button class="view-details" onclick="showDetails()">View Details</button>
+    <div class="tab-buttons" id="tabs" style="display:none;">
+      <button onclick="openTab('asia')">Asia</button>
+      <button onclick="openTab('america')">America</button>
+      <button onclick="openTab('europe')">Europe</button>
+    </div>
+    <div id="asia" class="tab-content">
+      <ul>
+        <li><a href="https://en.yna.co.kr/" target="_blank">🇰🇷 Yonhap News</a></li>
+        <li><a href="http://www.koreaherald.com/" target="_blank">🇰🇷 Korea Herald</a></li>
+        <li><a href="https://www.cgtn.com/world" target="_blank">🇨🇳 CGTN</a></li>
+        <li><a href="https://www3.nhk.or.jp/nhkworld/en/news/" target="_blank">🇯🇵 NHK World</a></li>
+      </ul>
+    </div>
+    <div id="america" class="tab-content">
+      <ul>
+        <li><a href="https://edition.cnn.com/world" target="_blank">🇺🇸 CNN</a></li>
+        <li><a href="https://www.foxnews.com/world" target="_blank">🇺🇸 FOX News</a></li>
+        <li><a href="https://www.bloomberg.com" target="_blank">🇺🇸 Bloomberg</a></li>
+        <li><a href="https://abcnews.go.com/International" target="_blank">🇺🇸 ABC News</a></li>
+      </ul>
+    </div>
+    <div id="europe" class="tab-content">
+      <ul>
+        <li><a href="https://www.bbc.com/news/world" target="_blank">🇬🇧 BBC News</a></li>
+        <li><a href="https://www.reuters.com/news/world" target="_blank">🇬🇧 Reuters</a></li>
+        <li><a href="https://www.ft.com/world" target="_blank">🇬🇧 Financial Times</a></li>
+        <li><a href="https://www.dw.com/en/top-stories/world/s-1429" target="_blank">🇩🇪 Deutsche Welle</a></li>
+      </ul>
+    </div>
   </div>
-  <div id="america" class="tab-content">
-    <ul>
-      <li><a href="https://edition.cnn.com/world" target="_blank">🇺🇸 CNN</a></li>
-      <li><a href="https://www.foxnews.com/world" target="_blank">🇺🇸 FOX News</a></li>
-      <li><a href="https://www.bloomberg.com" target="_blank">🇺🇸 Bloomberg</a></li>
-      <li><a href="https://abcnews.go.com/International" target="_blank">🇺🇸 ABC News</a></li>
-    </ul>
-  </div>
-  <div id="europe" class="tab-content">
-    <ul>
-      <li><a href="https://www.bbc.com/news/world" target="_blank">🇬🇧 BBC News</a></li>
-      <li><a href="https://www.reuters.com/news/world" target="_blank">🇬🇧 Reuters</a></li>
-      <li><a href="https://www.ft.com/world" target="_blank">🇬🇧 Financial Times</a></li>
-      <li><a href="https://www.dw.com/en/top-stories/world/s-1429" target="_blank">🇩🇪 Deutsche Welle</a></li>
-    </ul>
-  </div>
-</div>
 
-<!-- 다시 열기 버튼 -->
-<button class="reopen-btn" id="reopenBtn" onclick="reopenBox()">🔼 다시 보기</button>
+  <!-- Reopen 버튼 -->
+  <button class="reopen-btn" id="reopenBtn" onclick="reopenBox()">🔼 Reopen</button>
 
-<footer>
-  Copyright © <span id="year"></span> Myeongseong Ko
-</footer>
+  <footer>
+    Copyright © <span id="year"></span> Myeongseong Ko
+  </footer>
 
-<script>
-  document.getElementById('year').textContent = new Date().getFullYear();
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
 
-  function closeBox() {
-    document.getElementById('newsBox').style.display = 'none';
-    document.getElementById('reopenBtn').style.display = 'block';
-  }
-
-  function reopenBox() {
-    document.getElementById('newsBox').style.display = 'block';
-    document.getElementById('reopenBtn').style.display = 'none';
-  }
-
-  function openTab(tabId) {
-    var tabs = document.getElementsByClassName('tab-content');
-    for (var i = 0; i < tabs.length; i++) {
-      tabs[i].style.display = 'none';
+    function closeBox() {
+      document.getElementById('newsBox').style.display = 'none';
+      document.getElementById('reopenBtn').style.display = 'block';
     }
-    document.getElementById(tabId).style.display = 'block';
-  }
-</script>
+    function reopenBox() {
+      document.getElementById('newsBox').style.display = 'block';
+      document.getElementById('reopenBtn').style.display = 'none';
+    }
+    function showDetails() {
+      document.getElementById('tabs').style.display = 'block';
+      openTab('asia');
+      document.querySelector('.view-details').style.display = 'none';
+    }
+    function openTab(tabId) {
+      var tabs = document.getElementsByClassName('tab-content');
+      for (var i = 0; i < tabs.length; i++) {
+        tabs[i].style.display = 'none';
+      }
+      document.getElementById(tabId).style.display = 'block';
+    }
+  </script>
 
 </body>
 </html>
