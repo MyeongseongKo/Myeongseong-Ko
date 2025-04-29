@@ -217,8 +217,8 @@
 
   @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 
-  /* ── 2) 모바일 전용 미디어쿼리 (뷰포트 ≤ 600px) ── */
- @media (max-width: 600px) {
+ /* ── 모바일 전용 미디어쿼리 (뷰포트 ≤ 600px) ── */
+@media (max-width: 600px) {
   .hero-banner {
     height: 40vh;
     background-position: top;
@@ -229,14 +229,12 @@
     margin: 0 10px 20px;
     padding: 15px 10px;
     width: auto;
-    text-align: left;
+    text-align: left;    /* 좌측 정렬로 변경 */
   }
 
-  .news-content {
-    -webkit-line-clamp: unset;
-    display: block;
-  }
-
+  /* 여기에 clamp 해제/강제 확장은 제거합니다! */
+  /* .news-content { … unset, display:block 제거 } */
+  /* .news-content p { … } 만 남기고 기본 클램프 유지 */
   .news-content p {
     text-align: left;
     -webkit-hyphens: auto;
@@ -249,11 +247,8 @@
     bottom: 10px;
   }
 
-  /* ── 모바일에서 토글 버튼 숨기기 ── */
-  #toggleNews,
-  .view-details-card {
-    display: none;
-  }
+  /* 토글 버튼은 보이게 둡니다 */
+  /* #toggleNews, .view-details-card { display: none; } 제거 */
 }
 </style>
 </head>
