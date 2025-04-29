@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Global Insights | Myeongseong Ko</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
-  
+
   <style>
     html { box-sizing: border-box; }
     *, *::before, *::after { box-sizing: inherit; }
@@ -44,7 +44,8 @@
       position: absolute;
       top: 50%; left: 50%;
       transform: translate(-50%, -50%);
-      color: white; font-size: 48px;
+      color: white;
+      font-size: 48px;
       font-weight: bold;
       text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
       z-index: 1;
@@ -72,17 +73,17 @@
       word-wrap: break-word;
     }
     .news-content {
-     text-align: left;
-     display: block;
-     overflow: visible;
+      text-align: left;
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-line-clamp: 2; /* 기본은 2줄까지만 */
+      -webkit-box-orient: vertical;
+      transition: all 0.5s ease;
     }
     .news-content.expanded {
       display: block;
       overflow: visible;
       animation: fadeIn 0.5s ease-in;
-    }
-    .news-content.collapsing {
-      animation: fadeOut 0.5s ease-out;
     }
     .news-content p {
       font-size: 1rem;
@@ -209,14 +210,12 @@
     @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
     @keyframes fadeOut { from { opacity: 1; } to { opacity: 0; } }
 
-    /* 모바일 최적화 */
     @media (max-width: 600px) {
       .hero-banner {
         height: 40vh;
         background-position: top;
         padding: 20px 10px;
       }
-      /* .hero-text는 수정 없음 (PC와 통일) */
       .news-card {
         margin: 0 10px 20px;
         padding: 20px 10px;
@@ -256,69 +255,23 @@
     <div class="hero-text">Global Insights</div>
   </div>
 
-<div class="container">
-  <div class="news-card">
-    <h4>Geopolitical Risks, FDI, and GVC Fragmentation (2025)</h4>
-    <div class="news-content" id="newsContent">
-      <p>According to recent reports by BBC and IMF, trade policy uncertainty (TPU) and geopolitical risks are on the rise globally. Prior research shows that higher TPU negatively affects firms' export, investment, and FDI decisions — see Alessandria et al. (2022, <em>A Bridge on Economic Issues between China and the World</em>), Handley and Limão (2017, <em>American Economic Review</em>), and Helpman, Melitz, and Yeaple (2004, <em>American Economic Review</em>).</p>
-      <p>Furthermore, Julio and Yook (2016, <em>Journal of International Economics</em>) provide strong evidence that rising political risk makes overseas investment decisions significantly harder for firms. Considering that FDI plays a crucial role in strengthening global value chains (GVCs), increasing uncertainty inevitably threatens the stability and expansion of GVC networks.</p>
-      <p><em>My Comment:</em> Firms now face an environment where international investment decisions are structurally constrained by persistent policy and political uncertainty — with profound long-term implications for global economic integration.</p>
-    </div>
-    <button class="view-details-card" id="toggleNews">View Details</button>
-    <br>
-    <a class="report" href="https://www.bbc.co.uk/news/articles/c4g45zp77y5o" target="_blank">View BBC Report →</a><br>
-    <a class="report" href="https://www.reuters.com/business/imf-world-bank-meetings-end-with-little-tariff-clarity-economic-foreboding-2025-04-27/" target="_blank">View Reuters Coverage →</a>
-  </div>
-</div>
-
-  <!-- 글로벌 뉴스 박스 -->
-  <div class="news-box" id="newsBox">
-    <button class="close-btn" onclick="closeBox()">×</button>
-    <h5>Recommended Global News</h5>
-    <ul>
-      <li><a href="https://en.yna.co.kr/" target="_blank">🇰🇷 Yonhap News</a></li>
-      <li><a href="https://www.bloomberg.com" target="_blank">🇺🇸 Bloomberg</a></li>
-      <li><a href="https://www.reuters.com/news/world" target="_blank">🇬🇧 Reuters World</a></li>
-    </ul>
-    <button class="view-details" onclick="showDetails()">View Details</button>
-
-    <div class="tab-buttons" id="tabs" style="display:none;">
-      <button onclick="openTab('asia')">Asia</button>
-      <button onclick="openTab('america')">America</button>
-      <button onclick="openTab('europe')">Europe</button>
-    </div>
-
-    <div id="asia" class="tab-content">
-      <ul>
-        <li><a href="https://en.yna.co.kr/" target="_blank">🇰🇷 Yonhap News</a></li>
-        <li><a href="http://www.koreaherald.com/" target="_blank">🇰🇷 Korea Herald</a></li>
-        <li><a href="https://www.cgtn.com/world" target="_blank">🇨🇳 CGTN</a></li>
-        <li><a href="https://www3.nhk.or.jp/nhkworld/en/news/" target="_blank">🇯🇵 NHK World</a></li>
-      </ul>
-    </div>
-
-    <div id="america" class="tab-content">
-      <ul>
-        <li><a href="https://edition.cnn.com/world" target="_blank">🇺🇸 CNN</a></li>
-        <li><a href="https://www.foxnews.com/world" target="_blank">🇺🇸 FOX News</a></li>
-        <li><a href="https://www.bloomberg.com" target="_blank">🇺🇸 Bloomberg</a></li>
-        <li><a href="https://abcnews.go.com/International" target="_blank">🇺🇸 ABC News</a></li>
-      </ul>
-    </div>
-
-    <div id="europe" class="tab-content">
-      <ul>
-        <li><a href="https://www.bbc.com/news/world" target="_blank">🇬🇧 BBC News</a></li>
-        <li><a href="https://www.reuters.com/news/world" target="_blank">🇬🇧 Reuters</a></li>
-        <li><a href="https://www.ft.com/world" target="_blank">🇬🇧 Financial Times</a></li>
-        <li><a href="https://www.dw.com/en/top-stories/world/s-1429" target="_blank">🇩🇪 Deutsche Welle</a></li>
-      </ul>
+  <!-- Main Content -->
+  <div class="container">
+    <div class="news-card">
+      <h4>Geopolitical Risks, FDI, and GVC Fragmentation (2025)</h4>
+      <div class="news-content" id="newsContent">
+        <p>According to recent reports by BBC and IMF, trade policy uncertainty (TPU) and geopolitical risks are on the rise globally. Prior research shows that higher TPU negatively affects firms' export, investment, and FDI decisions — see Alessandria et al. (2022, <em>A Bridge on Economic Issues between China and the World</em>), Handley and Limão (2017, <em>American Economic Review</em>), and Helpman, Melitz, and Yeaple (2004, <em>American Economic Review</em>).</p>
+        <p>Furthermore, Julio and Yook (2016, <em>Journal of International Economics</em>) provide strong evidence that rising political risk makes overseas investment decisions significantly harder for firms. Considering that FDI plays a crucial role in strengthening global value chains (GVCs), increasing uncertainty inevitably threatens the stability and expansion of GVC networks.</p>
+        <p><em>My Comment:</em> Firms now face an environment where international investment decisions are structurally constrained by persistent policy and political uncertainty — with profound long-term implications for global economic integration.</p>
+      </div>
+      <button class="view-details-card" id="toggleNews">View Details</button>
+      <br>
+      <a class="report" href="https://www.bbc.co.uk/news/articles/c4g45zp77y5o" target="_blank">View BBC Report →</a><br>
+      <a class="report" href="https://www.reuters.com/business/imf-world-bank-meetings-end-with-little-tariff-clarity-economic-foreboding-2025-04-27/" target="_blank">View Reuters Coverage →</a>
     </div>
   </div>
 
-  <!-- Reopen 버튼 -->
-  <button class="reopen-btn" id="reopenBtn" onclick="reopenBox()">🔼 Reopen</button>
-
+  <!-- Footer -->
   <footer>
     Copyright © <span id="year"></span> Myeongseong Ko
   </footer>
@@ -328,6 +281,7 @@
 
     const content = document.getElementById('newsContent');
     const btn = document.getElementById('toggleNews');
+
     btn.addEventListener('click', () => {
       if (content.classList.contains('expanded')) {
         content.classList.add('collapsing');
@@ -340,27 +294,6 @@
         btn.textContent = 'View Less';
       }
     });
-
-    function closeBox() {
-      document.getElementById('newsBox').style.display = 'none';
-      document.getElementById('reopenBtn').style.display = 'block';
-    }
-    function reopenBox() {
-      document.getElementById('newsBox').style.display = 'block';
-      document.getElementById('reopenBtn').style.display = 'none';
-    }
-    function showDetails() {
-      document.getElementById('tabs').style.display = 'block';
-      openTab('asia');
-      document.querySelector('.view-details').style.display = 'none';
-    }
-    function openTab(tabId) {
-      var tabs = document.getElementsByClassName('tab-content');
-      for (var i = 0; i < tabs.length; i++) {
-        tabs[i].style.display = 'none';
-      }
-      document.getElementById(tabId).style.display = 'block';
-    }
   </script>
 
 </body>
