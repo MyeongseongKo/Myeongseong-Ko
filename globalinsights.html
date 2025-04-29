@@ -218,37 +218,43 @@
   @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 
   /* ── 2) 모바일 전용 미디어쿼리 (뷰포트 ≤ 600px) ── */
-  @media (max-width: 600px) {
-    .hero-banner {
-      height: 40vh;
-      background-position: top;
-      padding: 20px 10px;
-    }
-
-    .news-card {
-      margin: 0 10px 20px;
-      padding: 15px 10px;
-      width: auto;
-      text-align: left;
-    }
-
-    .news-content {
-      -webkit-line-clamp: unset;
-      display: block;
-    }
-
-    .news-content p {
-      text-align: left;
-      -webkit-hyphens: auto;
-      hyphens: auto;
-    }
-
-    .news-box {
-      width: calc(100% - 20px);
-      right: 10px;
-      bottom: 10px;
-    }
+ @media (max-width: 600px) {
+  .hero-banner {
+    height: 40vh;
+    background-position: top;
+    padding: 20px 10px;
   }
+
+  .news-card {
+    margin: 0 10px 20px;
+    padding: 15px 10px;
+    width: auto;
+    text-align: left;
+  }
+
+  .news-content {
+    -webkit-line-clamp: unset;
+    display: block;
+  }
+
+  .news-content p {
+    text-align: left;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+  }
+
+  .news-box {
+    width: calc(100% - 20px);
+    right: 10px;
+    bottom: 10px;
+  }
+
+  /* ── 모바일에서 토글 버튼 숨기기 ── */
+  #toggleNews,
+  .view-details-card {
+    display: none;
+  }
+}
 </style>
 </head>
 
