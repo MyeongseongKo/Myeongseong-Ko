@@ -151,6 +151,43 @@
       font-size: 14px;
       margin-top: 50px;
     }
+
+    /* ---- 모바일 반응형 최적화 (아이폰, 안드로이드폰 공통) ---- */
+    @media (max-width: 768px) {
+      .hero {
+        min-height: 80vh;
+        padding-top: 80px;
+        padding-bottom: 80px;
+        background-position: center top;
+      }
+
+      .profile-pic {
+        width: 120px;
+        height: 120px;
+      }
+
+      .hero h1 {
+        font-size: 36px;
+      }
+
+      .hero h3, .hero h4 {
+        font-size: 16px;
+      }
+
+      .btn {
+        padding: 10px 20px;
+        font-size: 16px;
+      }
+
+      .content {
+        padding: 0 15px;
+      }
+
+      footer {
+        text-align: center;
+        font-size: 12px;
+      }
+    }
   </style>
 </head>
 
@@ -171,7 +208,7 @@
     <h3>Indiana University Bloomington</h3>
     <h3>Department of Economics</h3>
     <h4>100 South Woodlawn Avenue, Bloomington, IN 47405, United States</h4>
-    <h4>myeoko[at]iu[dot]edu</a></h4>
+    <h4>myeoko[at]iu[dot]edu</h4>
     <a href="Curriculum_Vitae_MyeongseongKo_20240427.pdf" class="btn" download>
       <i class="fas fa-file-download"></i> Download CV
     </a>
