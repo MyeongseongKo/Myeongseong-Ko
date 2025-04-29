@@ -6,6 +6,10 @@
   <title>Global Insights | Myeongseong Ko</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet"/>
   <style>
+    /* 모든 요소에 border-box 적용 → padding 포함한 총 너비 계산 */
+    html { box-sizing: border-box; }
+    *, *::before, *::after { box-sizing: inherit; }
+
     body {
       margin: 0;
       font-family: 'Inter', sans-serif;
@@ -51,19 +55,19 @@
     .news-card {
       position: relative;
       background:white;
-      padding:20px;                /* 내부 여백 줄여서 꽉 차 보이게 */
+      padding:20px;
       border-radius:10px;
       box-shadow:0 6px 12px rgba(0,0,0,0.1);
       margin:0 auto 30px;
       max-width:800px;
-      width: 100%;                /* 항상 카드 너비에 맞춰 제목/본문 꽉 채움 */
+      width: 100%;
       text-align:center;
     }
     .news-card h4 {
       margin:0 0 1rem;
-      font-size:1.75rem;          /* 제목 크기 소폭 축소 */
+      font-size:1.75rem;
       color:#333;
-      word-wrap:break-word;       /* 긴 제목도 줄바꿈 */
+      word-wrap:break-word;
     }
     .news-content {
       text-align:left;
@@ -79,9 +83,8 @@
     .news-content.collapsing {
       animation:fadeOut 0.5s ease-out;
     }
-    /* 본문 단락 글씨 크기 및 간격 조정 */
     .news-content p {
-      font-size:1rem;            /* 16px */
+      font-size:1rem;
       margin:0 0 1em;
       line-height:1.5;
     }
