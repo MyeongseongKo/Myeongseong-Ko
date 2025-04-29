@@ -95,32 +95,30 @@
       word-break: break-word;
     }
 
-    /* 📱 모바일 대응 */
-    @media (max-width: 600px) {
-      .hero-banner {
-        height: 40vh;
-        background-position: top;
-        padding: 20px 10px;
-      }
+    .view-details-card {
+      margin: 10px auto;
+      display: block;
+      background: #990000;
+      color: white;
+      border: none;
+      padding: 6px 12px;
+      font-size: 14px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .view-details-card:hover { background: #770000; }
 
-      .news-card {
-        margin: 0 10px 20px;
-        padding: 20px 10px;
-      }
-
-      .news-content,
-      .news-content.expanded {
-        text-align: left;
-      }
-
-      .news-content p {
-        font-size: 15px;
-        line-height: 1.6;
-      }
+    .news-card a.report {
+      display: inline-block;
+      margin-top: 10px;
+      text-decoration: none;
+      color: #1a0dab;
+      font-weight: bold;
     }
 
     .news-box {
-      position: fixed; bottom: 20px; right: 20px;
+      position: fixed;
+      bottom: 20px; right: 20px;
       width: 280px;
       background: white;
       border: 2px solid #990000;
@@ -150,6 +148,7 @@
       margin-top: 10px;
       text-align: center;
     }
+
     .tab-buttons button {
       background: #990000;
       color: white;
@@ -160,7 +159,10 @@
       border-radius: 20px;
       cursor: pointer;
     }
-    .tab-buttons button:hover { background: #770000; }
+
+    .tab-buttons button:hover {
+      background: #770000;
+    }
 
     .tab-content {
       display: none;
@@ -177,7 +179,22 @@
       color: #990000;
       cursor: pointer;
     }
+
     .close-btn:hover { color: #770000; }
+
+    .view-details {
+      margin: 10px auto;
+      display: block;
+      background: #990000;
+      color: white;
+      border: none;
+      padding: 6px 12px;
+      font-size: 14px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .view-details:hover { background: #770000; }
 
     .reopen-btn {
       position: fixed;
@@ -193,6 +210,7 @@
       z-index: 998;
       cursor: pointer;
     }
+
     .reopen-btn:hover { background: #770000; }
 
     footer {
@@ -204,8 +222,22 @@
     }
 
     @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+    @media (max-width: 600px) {
+      .hero-banner {
+        height: 40vh;
+        background-position: top;
+        padding: 20px 10px;
+      }
+
+      .news-card {
+        margin: 0 10px 20px;
+        padding: 20px 10px;
+      }
+    }
   </style>
 </head>
+
 <body>
   <!-- Navbar -->
   <div class="navbar">
@@ -224,9 +256,9 @@
     <div class="news-card">
       <h4>Geopolitical Risks, FDI, and GVC Fragmentation (2025)</h4>
       <div class="news-content" id="newsContent">
-        <p>According to recent reports by BBC and IMF, trade policy uncertainty (TPU) and geopolitical risks are on the rise globally...</p>
-        <p>Furthermore, Julio and Yook (2016, <em>Journal of International Economics</em>) provide strong evidence that rising political risk makes overseas investment decisions significantly harder for firms.</p>
-        <p><em>My Comment:</em> Firms now face an environment where international investment decisions are structurally constrained by persistent policy and political uncertainty — with profound long-term implications for global economic integration.</p>
+        <p>According to recent reports by BBC and IMF, trade policy uncertainty (TPU) and geopolitical risks are on the rise globally. Prior research shows that higher TPU negatively affects firms' export, investment, and FDI decisions — see Alessandria et al. (2022, <em>A Bridge on Economic Issues between China and the World</em>), Handley and Limão (2017, <em>American Economic Review</em>), and Helpman, Melitz, and Yeaple (2004, <em>American Economic Review</em>).</p>
+        <p>Furthermore, Julio and Yook (2016, <em>Journal of International Economics</em>) provide strong evidence that rising political risk makes overseas investment decisions significantly harder for firms. Considering that FDI plays a crucial role in strengthening global value chains (GVCs), increasing uncertainty inevitably threatens the stability and expansion of GVC networks.</p>
+        <p>Firms now face an environment where international investment decisions are structurally constrained by persistent policy and political uncertainty — with profound long-term implications for global economic integration.</p>
       </div>
       <button class="view-details-card" id="toggleNews">View Details</button>
       <br>
@@ -245,13 +277,11 @@
       <li><a href="https://www.reuters.com/news/world" target="_blank">🇬🇧 Reuters World</a></li>
     </ul>
     <button class="view-details" onclick="showDetails()">View Details</button>
-
     <div class="tab-buttons" id="tabs" style="display:none;">
       <button onclick="openTab('asia')">Asia</button>
       <button onclick="openTab('america')">America</button>
       <button onclick="openTab('europe')">Europe</button>
     </div>
-
     <div id="asia" class="tab-content">
       <ul>
         <li><a href="https://en.yna.co.kr/" target="_blank">🇰🇷 Yonhap News</a></li>
@@ -260,7 +290,6 @@
         <li><a href="https://www3.nhk.or.jp/nhkworld/en/news/" target="_blank">🇯🇵 NHK World</a></li>
       </ul>
     </div>
-
     <div id="america" class="tab-content">
       <ul>
         <li><a href="https://edition.cnn.com/world" target="_blank">🇺🇸 CNN</a></li>
@@ -269,7 +298,6 @@
         <li><a href="https://abcnews.go.com/International" target="_blank">🇺🇸 ABC News</a></li>
       </ul>
     </div>
-
     <div id="europe" class="tab-content">
       <ul>
         <li><a href="https://www.bbc.com/news/world" target="_blank">🇬🇧 BBC News</a></li>
@@ -329,5 +357,6 @@
       document.getElementById(tabId).style.display = 'block';
     }
   </script>
+
 </body>
 </html>
