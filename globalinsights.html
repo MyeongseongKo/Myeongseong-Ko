@@ -126,11 +126,26 @@
 
   @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 
+  /* 모바일 전용 스타일 */
   @media (max-width: 600px) {
     .hero-banner {
       height: 40vh;
       background-position: top;
       padding: 20px 10px;
+    }
+    .tab-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 8px;
+      margin-bottom: 10px;
+    }
+    .tab-buttons button {
+      flex: 1 1 auto;
+      min-width: 120px;
+      font-size: 14px;
+      padding: 6px 8px;
+      border-radius: 15px;
     }
     .news-card {
       margin: 0 10px 20px;
@@ -171,36 +186,36 @@
   <!-- Main Content -->
   <div class="container">
     <!-- About -->
-<div class="tab-section" id="about" style="display:block;">
-  <div class="news-card">
-    <h4 style="text-align: center;">Why Global Insights?</h4>
+    <div class="tab-section" id="about" style="display:block;">
+      <div class="news-card">
+        <h4 style="text-align: center;">Why Global Insights?</h4>
 
-    <p>In an era of rising geopolitical tensions and global environmental imperatives, cooperative trade mechanisms are more vital than ever. This page was created to provide rigorous, data-driven insights into how international trade policies can shape, and be shaped by, such complex global forces. As the global economy grows increasingly interdependent through global value chains (GVCs), the consequences of protectionist responses may be more damaging than traditional economic models anticipated.</p>
+        <p>In an era of rising geopolitical tensions and global environmental imperatives, cooperative trade mechanisms are more vital than ever. This page was created to provide rigorous, data-driven insights into how international trade policies can shape, and be shaped by, such complex global forces. As the global economy grows increasingly interdependent through global value chains (GVCs), the consequences of protectionist responses may be more damaging than traditional economic models anticipated.</p>
 
-    <p>Recent environmental policies—such as climate-related trade restrictions, carbon border adjustments, and sustainability standards—are reshaping the way nations design trade agreements and supply networks. These challenges may constrain long-run specialization and efficiency gains across borders.</p>
+        <p>Recent environmental policies—such as climate-related trade restrictions, carbon border adjustments, and sustainability standards—are reshaping the way nations design trade agreements and supply networks. These challenges may constrain long-run specialization and efficiency gains across borders.</p>
 
-    <p>Shapiro (2021, <em>Quarterly Journal of Economics</em>) documents that many countries’ trade policies are environmentally biased—favoring pollution-intensive industries and penalizing cleaner sectors—thus worsening environmental inefficiency through distorted incentives. Similarly, Caliendo and Parro (2015, <em>Review of Economic Studies</em>) show that trade barriers under GVC linkages can magnify welfare losses across nations.</p>
+        <p>Shapiro (2021, <em>Quarterly Journal of Economics</em>) documents that many countries’ trade policies are environmentally biased—favoring pollution-intensive industries and penalizing cleaner sectors—thus worsening environmental inefficiency through distorted incentives. Similarly, Caliendo and Parro (2015, <em>Review of Economic Studies</em>) show that trade barriers under GVC linkages can magnify welfare losses across nations.</p>
 
-    <p>Dekle, Eaton, and Kortum (2008, <em>IMF Staff Papers</em>) further warn that artificial trade adjustments designed to fix imbalances can, paradoxically, harm long-term welfare by distorting comparative advantage and consumption efficiency.</p>
+        <p>Dekle, Eaton, and Kortum (2008, <em>IMF Staff Papers</em>) further warn that artificial trade adjustments designed to fix imbalances can, paradoxically, harm long-term welfare by distorting comparative advantage and consumption efficiency.</p>
 
-    <p>In foundational work, Bagwell and Staiger (1999, <em>American Economic Review</em>) provide the theoretical rationale behind trade agreements like GATT, showing how they internalize terms-of-trade externalities and foster mutual gains through reciprocity. In follow-up work (2002, <em>The American Economist</em>), they explain how core GATT/WTO rules—reciprocity, non-discrimination, and bindings—are economically coherent responses to policy externalities and essential for long-term cooperation.</p>
+        <p>In foundational work, Bagwell and Staiger (1999, <em>American Economic Review</em>) provide the theoretical rationale behind trade agreements like GATT, showing how they internalize terms-of-trade externalities and foster mutual gains through reciprocity. In follow-up work (2002, <em>The American Economist</em>), they explain how core GATT/WTO rules—reciprocity, non-discrimination, and bindings—are economically coherent responses to policy externalities and essential for long-term cooperation.</p>
 
-    <p>Understanding trade through this broader lens reveals a stark reality: if the world turns inward now, the resulting fragmentation will lead to inefficiencies and increased global instability. Therefore, reinforcing and evolving cooperative trade frameworks is no longer just a theoretical ideal—it is a practical necessity for peace and shared prosperity.</p>
+        <p>Understanding trade through this broader lens reveals a stark reality: if the world turns inward now, the resulting fragmentation will lead to inefficiencies and increased global instability. Therefore, reinforcing and evolving cooperative trade frameworks is no longer just a theoretical ideal—it is a practical necessity for peace and shared prosperity.</p>
 
-    <!-- Reference Section -->
-    <div class="references" style="margin-top:30px; padding:15px; background:#f4f4f4; border-radius:8px; font-size: 16px;">
-      <h5 style="margin-top:0; text-align: center; color: #990000;">References</h5>
-      <ul style="list-style-type: none; padding-left: 0;">
-        <li>• Shapiro, J. (2021). The Environmental Bias of Trade Policy. <em>Quarterly Journal of Economics</em>.</li>
-        <li>• Caliendo, L., & Parro, F. (2015). Estimates of the Trade and Welfare Effects of NAFTA. <em>Review of Economic Studies</em>.</li>
-        <li>• Dekle, R., Eaton, J., & Kortum, S. (2008). Unbalanced Trade. <em>IMF Staff Papers</em>.</li>
-        <li>• Bagwell, K., & Staiger, R. W. (1999). An Economic Theory of GATT. <em>American Economic Review</em>.</li>
-        <li>• Bagwell, K., & Staiger, R. W. (2002). Economic Theory and the Interpretation of GATT/WTO. <em>The American Economist</em>.</li>
-      </ul>
+        <div class="references" style="margin-top:30px; padding:15px; background:#f4f4f4; border-radius:8px; font-size: 16px;">
+          <h5 style="margin-top:0; text-align: center; color: #990000;">References</h5>
+          <ul style="list-style-type: none; padding-left: 0;">
+            <li>• Bagwell, K., & Staiger, R. W. (1999). An Economic Theory of GATT. <em>American Economic Review</em>.</li>
+            <li>• Bagwell, K., & Staiger, R. W. (2002). Economic Theory and the Interpretation of GATT/WTO. <em>The American Economist</em>.</li>
+            <li>• Caliendo, L., & Parro, F. (2015). Estimates of the Trade and Welfare Effects of NAFTA. <em>Review of Economic Studies</em>.</li>
+            <li>• Dekle, R., Eaton, J., & Kortum, S. (2008). Unbalanced Trade. <em>IMF Staff Papers</em>.</li>
+            <li>• Shapiro, J. (2021). The Environmental Bias of Trade Policy. <em>Quarterly Journal of Economics</em>.</li>
+          </ul>
+        </div>
+
+      </div>
     </div>
 
-  </div>
-</div>
 
     <!-- Data -->
     <div class="tab-section" id="data">
@@ -234,7 +249,7 @@
     </div>
   </div>
 
-  <!-- Footer -->
+<!-- Footer -->
   <footer>
     Copyright © <span id="year"></span> Myeongseong Ko
   </footer>
@@ -250,23 +265,6 @@
       }
       document.getElementById(tabId).style.display = 'block';
     }
-
-    document.addEventListener("DOMContentLoaded", function () {
-      const toggleButtons = document.querySelectorAll(".toggle-btn");
-      toggleButtons.forEach(function (btn) {
-        btn.addEventListener("click", function () {
-          const card = btn.closest(".news-card");
-          const hidden = card.querySelector(".hidden-content");
-          if (hidden.style.display === "none") {
-            hidden.style.display = "block";
-            btn.textContent = "View Less";
-          } else {
-            hidden.style.display = "none";
-            btn.textContent = "View Details";
-          }
-        });
-      });
-    });
   </script>
 </body>
 </html>
