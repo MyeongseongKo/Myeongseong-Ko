@@ -54,6 +54,28 @@
     margin-top: 30px; padding: 20px;
   }
 
+  .tab-buttons {
+    margin-top: 20px;
+    text-align: center;
+  }
+  .tab-buttons button {
+    background: #990000;
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    margin: 0 6px;
+    font-size: 16px;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+  .tab-buttons button:hover { background: #770000; }
+
+  .tab-section {
+    display: none;
+    margin-top: 20px;
+    animation: fadeIn 0.4s ease-in;
+  }
+
   .news-card {
     background: white;
     padding: 20px;
@@ -94,28 +116,6 @@
     background: #770000;
   }
 
-  .tab-buttons {
-    margin-top: 10px;
-    text-align: center;
-  }
-  .tab-buttons button {
-    background: #990000;
-    color: white;
-    border: none;
-    padding: 8px 14px;
-    margin: 0 6px;
-    font-size: 16px;
-    border-radius: 20px;
-    cursor: pointer;
-  }
-  .tab-buttons button:hover { background: #770000; }
-
-  .tab-section {
-    display: none;
-    margin-top: 20px;
-    animation: fadeIn 0.4s ease-in;
-  }
-
   footer {
     background-color: #990000;
     color: white;
@@ -151,10 +151,8 @@
   <!-- Navbar -->
   <div class="navbar">
     <a href="index.html">Home</a>
-    <a href="#" onclick="showTab('about')">About</a>
-    <a href="#" onclick="showTab('data')">Data</a>
-    <a href="#" onclick="showTab('papers')">Papers</a>
-    <a href="#" onclick="showTab('reports')">Reports</a>
+    <a href="globalinsights.html">Global Insights</a>
+    <a href="affiliations.html">Affiliations</a>
   </div>
 
   <!-- Hero -->
@@ -162,10 +160,17 @@
     <div class="hero-text">Global Insights</div>
   </div>
 
-  <!-- Main Content -->
-  <div class="container">
-    <h2 style="color:#990000;">📘 Global Insight Topics</h2>
+  <!-- Tab Buttons -->
+  <div class="tab-buttons">
+    <button onclick="showTab('about')">📘 About</button>
+    <button onclick="showTab('data')">📊 Data-Driven Summaries</button>
+    <button onclick="showTab('papers')">📚 Academic Research</button>
+    <button onclick="showTab('reports')">📑 Policy Reports</button>
+  </div>
 
+  <!-- Main Content Tabs -->
+  <div class="container">
+    <!-- About -->
     <div class="tab-section" id="about" style="display:block;">
       <div class="news-card">
         <h4>Why Global Insights?</h4>
@@ -181,6 +186,7 @@
       </div>
     </div>
 
+    <!-- Data -->
     <div class="tab-section" id="data">
       <div class="news-card">
         <h4>Geopolitical Risks, FDI, and GVC Fragmentation (2025)</h4>
@@ -195,6 +201,7 @@
       </div>
     </div>
 
+    <!-- Papers -->
     <div class="tab-section" id="papers">
       <div class="news-card">
         <h4>Coming Soon: Summary of Peer-Reviewed Articles</h4>
@@ -202,6 +209,7 @@
       </div>
     </div>
 
+    <!-- Reports -->
     <div class="tab-section" id="reports">
       <div class="news-card">
         <h4>Coming Soon: Summaries of IMF, WTO, OECD Reports</h4>
