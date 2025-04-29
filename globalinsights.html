@@ -6,7 +6,6 @@
   <title>Global Insights | Myeongseong Ko</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
   <style>
-  /* ── 1) 전체 기본 스타일 ── */
   html { box-sizing: border-box; }
   *, *::before, *::after { box-sizing: inherit; }
 
@@ -73,30 +72,14 @@
     word-wrap: break-word;
   }
 
-  .news-content {
-    text-align: justify;
-    overflow: hidden;
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    transition: all 0.5s ease;
-  }
-
-  .news-content.expanded {
-    display: block;
-    overflow: visible;
-    animation: fadeIn 0.5s ease-in;
-    text-align: justify;
-  }
-
-  .news-content p {
+  .news-card p {
     font-size: 1rem;
     margin: 0 0 1em;
     line-height: 1.5;
     word-break: break-word;
   }
 
-  .view-details-card {
+  .toggle-btn {
     margin: 10px auto;
     display: block;
     background: #990000;
@@ -107,43 +90,9 @@
     border-radius: 5px;
     cursor: pointer;
   }
-  .view-details-card:hover { background: #770000; }
-
-  .news-card a.report {
-    display: inline-block;
-    margin-top: 10px;
-    text-decoration: none;
-    color: #1a0dab;
-    font-weight: bold;
+  .toggle-btn:hover {
+    background: #770000;
   }
-
-  .news-box {
-    position: fixed;
-    bottom: 20px; right: 20px;
-    width: 280px;
-    background: white;
-    border: 2px solid #990000;
-    border-radius: 10px;
-    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
-    z-index: 999;
-    padding: 15px;
-    animation: fadeIn 1s ease-in;
-  }
-
-  .news-box h5 {
-    margin: 0 0 10px;
-    font-size: 18px;
-    color: #990000;
-  }
-
-  .news-box ul { list-style: none; padding: 0; margin: 0; }
-  .news-box li { margin-bottom: 8px; }
-  .news-box a {
-    color: #1a0dab;
-    text-decoration: none;
-    font-size: 14px;
-  }
-  .news-box a:hover { text-decoration: underline; }
 
   .tab-buttons {
     margin-top: 10px;
@@ -153,59 +102,19 @@
     background: #990000;
     color: white;
     border: none;
-    padding: 5px 10px;
-    margin: 2px;
-    font-size: 14px;
+    padding: 8px 14px;
+    margin: 0 6px;
+    font-size: 16px;
     border-radius: 20px;
     cursor: pointer;
   }
   .tab-buttons button:hover { background: #770000; }
 
-  .tab-content {
+  .tab-section {
     display: none;
-    margin-top: 10px;
-    animation: fadeIn 0.5s ease-in;
+    margin-top: 20px;
+    animation: fadeIn 0.4s ease-in;
   }
-
-  .close-btn {
-    position: absolute;
-    top: 5px; right: 10px;
-    background: none;
-    border: none;
-    font-size: 18px;
-    color: #990000;
-    cursor: pointer;
-  }
-  .close-btn:hover { color: #770000; }
-
-  .view-details {
-    margin: 10px auto;
-    display: block;
-    background: #990000;
-    color: white;
-    border: none;
-    padding: 6px 12px;
-    font-size: 14px;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  .view-details:hover { background: #770000; }
-
-  .reopen-btn {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background: #990000;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 20px;
-    font-size: 16px;
-    display: none;
-    z-index: 998;
-    cursor: pointer;
-  }
-  .reopen-btn:hover { background: #770000; }
 
   footer {
     background-color: #990000;
@@ -217,40 +126,25 @@
 
   @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 
- /* ── 모바일 전용 미디어쿼리 (뷰포트 ≤ 600px) ── */
-@media (max-width: 600px) {
-  .hero-banner {
-    height: 40vh;
-    background-position: top;
-    padding: 20px 10px;
+  @media (max-width: 600px) {
+    .hero-banner {
+      height: 40vh;
+      background-position: top;
+      padding: 20px 10px;
+    }
+    .news-card {
+      margin: 0 10px 20px;
+      padding: 15px 10px;
+      width: auto;
+      text-align: left;
+    }
+    .news-card p {
+      text-align: left;
+      -webkit-hyphens: auto;
+      hyphens: auto;
+    }
   }
-
-  .news-card {
-    margin: 0 10px 20px;
-    padding: 15px 10px;
-    width: auto;
-    text-align: left;    /* 좌측 정렬로 변경 */
-  }
-
-  /* 여기에 clamp 해제/강제 확장은 제거합니다! */
-  /* .news-content { … unset, display:block 제거 } */
-  /* .news-content p { … } 만 남기고 기본 클램프 유지 */
-  .news-content p {
-    text-align: left;
-    -webkit-hyphens: auto;
-    hyphens: auto;
-  }
-
-  .news-box {
-    width: calc(100% - 20px);
-    right: 10px;
-    bottom: 10px;
-  }
-
-  /* 토글 버튼은 보이게 둡니다 */
-  /* #toggleNews, .view-details-card { display: none; } 제거 */
-}
-</style>
+  </style>
 </head>
 
 <body>
@@ -268,110 +162,77 @@
 
   <!-- Main Content -->
   <div class="container">
-    <div class="news-card">
-      <h4>Geopolitical Risks, FDI, and GVC Fragmentation (2025)</h4>
-      <div class="news-content" id="newsContent">
-        <p>According to recent reports by BBC and IMF, trade policy uncertainty (TPU) and geopolitical risks are on the rise globally. Prior research shows that higher TPU negatively affects firms' export, investment, and FDI decisions. You can read Alessandria et al. (2022, <em>A Bridge on Economic Issues between China and the World</em>), Handley and Limão (2017, <em>American Economic Review</em>), and Helpman, Melitz, and Yeaple (2004, <em>American Economic Review</em>).</p>
-        <p>Furthermore, Julio and Yook (2016, <em>Journal of International Economics</em>) provide strong evidence that rising political risk makes overseas investment decisions significantly harder for firms. Considering that FDI plays a crucial role in strengthening global value chains (GVCs), increasing uncertainty inevitably threatens the stability and expansion of GVC networks.</p>
-        <p>Firms now face an environment where international investment decisions are structurally constrained by persistent policy and political uncertainty with profound long-term implications for global economic integration.</p>
+    <h2 style="color:#990000;">📘 Global Insight Topics</h2>
+
+    <div class="tab-buttons">
+      <button onclick="showTab('data')">📊 Data-Driven Summaries</button>
+      <button onclick="showTab('papers')">📚 Academic Research</button>
+      <button onclick="showTab('reports')">📑 Policy Reports</button>
+    </div>
+
+    <div id="data" class="tab-section" style="display:block;">
+      <!-- Introductory Card -->
+      <div class="news-card">
+        <h4>Why Global Insights?</h4>
+        <div class="news-content">
+          <p>Recent developments in geopolitics, security, and environmental issues have profoundly impacted global economic dynamics. From the perspective of international trade, these factors can significantly reduce welfare in the long run—especially if they lead to a rise in protectionism.</p>
+          <div class="hidden-content" style="display: none;">
+            <p>As Caliendo and Parro (2015, <em>Review of Economic Studies</em>) show, trade barriers under global value chains (GVCs) amplify negative welfare effects. Moreover, policy interventions aiming to fix trade imbalances often result in long-term harm to global welfare, as noted by DEK (2008, IMF).</p>
+            <p>As a researcher in international trade, my goal is to provide insights grounded in economic theory and empirical data. This project was launched to explore how cooperation—such as trade agreements—has become more vital than predicted by traditional models. Ultimately, I hope this work contributes to peace and prosperity through deeper economic understanding.</p>
+          </div>
+        </div>
+        <button class="toggle-btn">View Details</button>
       </div>
-      <button class="view-details-card" id="toggleNews">View Details</button>
-      <br>
-      <a class="report" href="https://www.bbc.co.uk/news/articles/c4g45zp77y5o" target="_blank">View BBC Report →</a><br>
-      <a class="report" href="https://www.reuters.com/business/imf-world-bank-meetings-end-with-little-tariff-clarity-economic-foreboding-2025-04-27/" target="_blank">View Reuters Coverage →</a>
+    </div>
+
+    <div id="papers" class="tab-section">
+      <div class="news-card">
+        <h4>Coming Soon: Summary of Peer-Reviewed Articles</h4>
+        <p>Academic insight summaries from journals such as <em>Journal of International Economics</em> or <em>World Economy</em> will be featured here.</p>
+      </div>
+    </div>
+
+    <div id="reports" class="tab-section">
+      <div class="news-card">
+        <h4>Coming Soon: Summaries of IMF, WTO, OECD Reports</h4>
+        <p>Policy briefs and data-driven insights from international organizations will appear here soon.</p>
+      </div>
     </div>
   </div>
 
-  <!-- Global News Box -->
-  <div class="news-box" id="newsBox">
-    <button class="close-btn" onclick="closeBox()">×</button>
-    <h5>Recommended Global News</h5>
-    <ul>
-      <li><a href="https://en.yna.co.kr/" target="_blank">🇰🇷 Yonhap News</a></li>
-      <li><a href="https://www.bloomberg.com" target="_blank">🇺🇸 Bloomberg</a></li>
-      <li><a href="https://www.reuters.com/news/world" target="_blank">🇬🇧 Reuters World</a></li>
-    </ul>
-    <button class="view-details" onclick="showDetails()">View Details</button>
-    <div class="tab-buttons" id="tabs" style="display:none;">
-      <button onclick="openTab('asia')">Asia</button>
-      <button onclick="openTab('america')">America</button>
-      <button onclick="openTab('europe')">Europe</button>
-    </div>
-    <div id="asia" class="tab-content">
-      <ul>
-        <li><a href="https://en.yna.co.kr/" target="_blank">🇰🇷 Yonhap News</a></li>
-        <li><a href="http://www.koreaherald.com/" target="_blank">🇰🇷 Korea Herald</a></li>
-        <li><a href="https://www.cgtn.com/world" target="_blank">🇨🇳 CGTN</a></li>
-        <li><a href="https://www3.nhk.or.jp/nhkworld/en/news/" target="_blank">🇯🇵 NHK World</a></li>
-      </ul>
-    </div>
-    <div id="america" class="tab-content">
-      <ul>
-        <li><a href="https://edition.cnn.com/world" target="_blank">🇺🇸 CNN</a></li>
-        <li><a href="https://www.foxnews.com/world" target="_blank">🇺🇸 FOX News</a></li>
-        <li><a href="https://www.bloomberg.com" target="_blank">🇺🇸 Bloomberg</a></li>
-        <li><a href="https://abcnews.go.com/International" target="_blank">🇺🇸 ABC News</a></li>
-      </ul>
-    </div>
-    <div id="europe" class="tab-content">
-      <ul>
-        <li><a href="https://www.bbc.com/news/world" target="_blank">🇬🇧 BBC News</a></li>
-        <li><a href="https://www.reuters.com/news/world" target="_blank">🇬🇧 Reuters</a></li>
-        <li><a href="https://www.ft.com/world" target="_blank">🇬🇧 Financial Times</a></li>
-        <li><a href="https://www.dw.com/en/top-stories/world/s-1429" target="_blank">🇩🇪 Deutsche Welle</a></li>
-      </ul>
-    </div>
-  </div>
-
-  <button class="reopen-btn" id="reopenBtn" onclick="reopenBox()">🔼 Reopen</button>
-
+  <!-- Footer -->
   <footer>
     Copyright © <span id="year"></span> Myeongseong Ko
   </footer>
 
+  <!-- Scripts -->
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    const content = document.getElementById('newsContent');
-    const btn = document.getElementById('toggleNews');
-
-    btn.addEventListener('click', () => {
-      if (content.classList.contains('expanded')) {
-        content.classList.add('collapsing');
-        setTimeout(() => {
-          content.classList.remove('expanded', 'collapsing');
-          btn.textContent = 'View Details';
-        }, 500);
-      } else {
-        content.classList.add('expanded');
-        btn.textContent = 'View Less';
-      }
-    });
-
-    function closeBox() {
-      document.getElementById('newsBox').style.display = 'none';
-      document.getElementById('reopenBtn').style.display = 'block';
-    }
-
-    function reopenBox() {
-      document.getElementById('newsBox').style.display = 'block';
-      document.getElementById('reopenBtn').style.display = 'none';
-    }
-
-    function showDetails() {
-      document.getElementById('tabs').style.display = 'block';
-      openTab('asia');
-      document.querySelector('.view-details').style.display = 'none';
-    }
-
-    function openTab(tabId) {
-      const tabs = document.getElementsByClassName('tab-content');
+    function showTab(tabId) {
+      const tabs = document.getElementsByClassName('tab-section');
       for (let i = 0; i < tabs.length; i++) {
         tabs[i].style.display = 'none';
       }
       document.getElementById(tabId).style.display = 'block';
     }
-  </script>
 
+    document.addEventListener("DOMContentLoaded", function () {
+      const toggleButtons = document.querySelectorAll(".toggle-btn");
+      toggleButtons.forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          const card = btn.closest(".news-card");
+          const hidden = card.querySelector(".hidden-content");
+          if (hidden.style.display === "none") {
+            hidden.style.display = "block";
+            btn.textContent = "View Less";
+          } else {
+            hidden.style.display = "none";
+            btn.textContent = "View Details";
+          }
+        });
+      });
+    });
+  </script>
 </body>
 </html>
