@@ -151,8 +151,10 @@
   <!-- Navbar -->
   <div class="navbar">
     <a href="index.html">Home</a>
-    <a href="globalinsights.html">Global Insights</a>
-    <a href="affiliations.html">Affiliations</a>
+    <a href="#" onclick="showTab('about')">About</a>
+    <a href="#" onclick="showTab('data')">Data</a>
+    <a href="#" onclick="showTab('papers')">Papers</a>
+    <a href="#" onclick="showTab('reports')">Reports</a>
   </div>
 
   <!-- Hero -->
@@ -164,35 +166,43 @@
   <div class="container">
     <h2 style="color:#990000;">📘 Global Insight Topics</h2>
 
-    <div class="tab-buttons">
-      <button onclick="showTab('data')">📊 Data-Driven Summaries</button>
-      <button onclick="showTab('papers')">📚 Academic Research</button>
-      <button onclick="showTab('reports')">📑 Policy Reports</button>
-    </div>
-
-    <div id="data" class="tab-section" style="display:block;">
-      <!-- Introductory Card -->
+    <div class="tab-section" id="about" style="display:block;">
       <div class="news-card">
         <h4>Why Global Insights?</h4>
         <div class="news-content">
           <p>Recent developments in geopolitics, security, and environmental issues have profoundly impacted global economic dynamics. From the perspective of international trade, these factors can significantly reduce welfare in the long run—especially if they lead to a rise in protectionism.</p>
           <div class="hidden-content" style="display: none;">
-            <p>As Caliendo and Parro (2015, <em>Review of Economic Studies</em>) show, trade barriers under global value chains (GVCs) amplify negative welfare effects. Moreover, policy interventions aiming to fix trade imbalances often result in long-term harm to global welfare, as noted by DEK (2008, IMF).</p>
-            <p>As a researcher in international trade, my goal is to provide insights grounded in economic theory and empirical data. This project was launched to explore how cooperation—such as trade agreements—has become more vital than predicted by traditional models. Ultimately, I hope this work contributes to peace and prosperity through deeper economic understanding.</p>
+            <p>Caliendo and Parro (2015, <em>Review of Economic Studies</em>) quantitatively evaluate how NAFTA affected trade and welfare using a multisector Ricardian model with input-output linkages. Their findings suggest that trade barriers within GVCs amplify welfare effects across countries.</p>
+            <p>Similarly, Dekle, Eaton, and Kortum (2008, <em>IMF Staff Papers</em>) demonstrate that correcting trade imbalances through artificial policy instruments can reduce long-run welfare, even if trade remains balanced. These policies distort comparative advantage and reduce real consumption.</p>
+            <p>This page aims to provide rigorous, data-driven insights on such issues. As a researcher in international trade, I hope these analyses can contribute to global understanding, peace, and prosperity.</p>
           </div>
         </div>
         <button class="toggle-btn">View Details</button>
       </div>
     </div>
 
-    <div id="papers" class="tab-section">
+    <div class="tab-section" id="data">
+      <div class="news-card">
+        <h4>Geopolitical Risks, FDI, and GVC Fragmentation (2025)</h4>
+        <div class="news-content">
+          <p>Trade policy uncertainty and geopolitical tensions are on the rise globally. Prior studies show such uncertainty affects firm decisions significantly.</p>
+          <div class="hidden-content" style="display: none;">
+            <p>Julio and Yook (2016) and Helpman et al. (2004) confirm that FDI and exports are discouraged by political instability. The stability of GVCs is increasingly challenged.</p>
+            <p>Thus, international cooperation through trade agreements is even more critical than what traditional models predicted.</p>
+          </div>
+        </div>
+        <button class="toggle-btn">View Details</button>
+      </div>
+    </div>
+
+    <div class="tab-section" id="papers">
       <div class="news-card">
         <h4>Coming Soon: Summary of Peer-Reviewed Articles</h4>
         <p>Academic insight summaries from journals such as <em>Journal of International Economics</em> or <em>World Economy</em> will be featured here.</p>
       </div>
     </div>
 
-    <div id="reports" class="tab-section">
+    <div class="tab-section" id="reports">
       <div class="news-card">
         <h4>Coming Soon: Summaries of IMF, WTO, OECD Reports</h4>
         <p>Policy briefs and data-driven insights from international organizations will appear here soon.</p>
