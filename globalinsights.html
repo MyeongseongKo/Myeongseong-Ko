@@ -8,7 +8,7 @@
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
 
-  <!-- CSS 스타일 추가 -->
+  <!-- CSS 스타일 -->
   <style>
     body {
       margin: 0;
@@ -57,7 +57,7 @@
       content: "";
       position: absolute;
       top: 0; left: 0; right: 0; bottom: 0;
-      background: rgba(0, 0, 0, 0.3); /* 어두운 필터 */
+      background: rgba(0, 0, 0, 0.3);
     }
 
     .hero-text {
@@ -133,6 +133,48 @@
       font-weight: normal;
       margin-top: 50px;
     }
+
+    /* 🌍 글로벌 뉴스 광고 박스 스타일 */
+    .news-ads {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: white;
+      border: 2px solid #990000;
+      border-radius: 10px;
+      padding: 15px;
+      width: 220px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+      z-index: 1000;
+      animation: fadeIn 1.5s ease-in;
+    }
+
+    .news-ads h5 {
+      margin-top: 0;
+      margin-bottom: 10px;
+      font-size: 18px;
+      color: #990000;
+    }
+
+    .news-ads ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .news-ads li {
+      margin-bottom: 8px;
+    }
+
+    .news-ads a {
+      color: #1a0dab;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .news-ads a:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
 
@@ -166,6 +208,17 @@
       <a href="https://www.reuters.com/business/imf-world-bank-meetings-end-with-little-tariff-clarity-economic-foreboding-2025-04-27/" target="_blank">View Reuters Coverage →</a>
     </div>
   </div>
+</div>
+
+<!-- 🌍 글로벌 뉴스 추천 박스 -->
+<div class="news-ads">
+  <h5>🌍 Trending News</h5>
+  <ul>
+    <li><a href="https://www.bbc.com/news/world" target="_blank">BBC World News →</a></li>
+    <li><a href="https://edition.cnn.com/world" target="_blank">CNN World →</a></li>
+    <li><a href="https://www.foxnews.com/world" target="_blank">FOX News World →</a></li>
+    <li><a href="https://abcnews.go.com/International" target="_blank">ABC News International →</a></li>
+  </ul>
 </div>
 
 <!-- Footer -->
